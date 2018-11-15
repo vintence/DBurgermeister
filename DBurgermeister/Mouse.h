@@ -9,10 +9,12 @@ public:
 	Mouse();
 	~Mouse();
 
-	sf::Texture texture;
 	sf::Sprite cursor;
+	sf::Sprite cursor2;
 	void Update(sf::RenderWindow &window);
 	void Draw(sf::RenderWindow &window);
+	sf::Vector2f mousePosWindow;
+	int spriteOrigin;
 };
 
 #endif
