@@ -1,2 +1,8 @@
 ﻿  Mouse.cpp
+c:\users\trungkin.le\documents\visual studio 2017\projects\dburgermeister\dburgermeister\mouse.cpp(23): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\trungkin.le\documents\visual studio 2017\projects\dburgermeister\dburgermeister\mouse.cpp(41): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
   DBurgermeister.vcxproj -> C:\Users\trungkin.le\Documents\Visual Studio 2017\Projects\DBurgermeister\Debug\DBurgermeister.exe
