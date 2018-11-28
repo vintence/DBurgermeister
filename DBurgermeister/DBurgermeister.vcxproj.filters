@@ -19,6 +19,12 @@
     <Filter Include="Resources">
       <UniqueIdentifier>{9b70ecc1-e2a2-4e85-88b8-ce0d29b36e22}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Interfaces">
+      <UniqueIdentifier>{e237a852-0099-4055-b71e-4df0c24547b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tiles">
+      <UniqueIdentifier>{3ccb8171-a982-4d0d-8ea9-df7dc727ade0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -31,6 +37,18 @@
       <Filter>Resources</Filter>
     </ClInclude>
     <ClInclude Include="InputManager.h">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Build.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="Political.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="Tile.h">
+      <Filter>Tiles</Filter>
+    </ClInclude>
+    <ClInclude Include="Buildings.h">
       <Filter>Resources</Filter>
     </ClInclude>
   </ItemGroup>
@@ -48,6 +66,18 @@
       <Filter>Resources</Filter>
     </ClCompile>
     <ClCompile Include="InputManager.cpp">
+      <Filter>Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="Build.cpp">
+      <Filter>Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="Political.cpp">
+      <Filter>Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="Tile.cpp">
+      <Filter>Tiles</Filter>
+    </ClCompile>
+    <ClCompile Include="Buildings.cpp">
       <Filter>Resources</Filter>
     </ClCompile>
   </ItemGroup>

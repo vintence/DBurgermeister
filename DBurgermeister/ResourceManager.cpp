@@ -6,6 +6,8 @@ ResourceManager::ResourceManager()
 {
 	LoadTexture("cursor", "Resources/kien.png");
 	LoadTexture("spritetest", "Resources/spritetest.png");
+
+	LoadFont("font", "Resources/testingFont.ttf");
 }
 
 void ResourceManager::LoadTexture(std::string textureName, std::string filename)

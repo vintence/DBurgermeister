@@ -6,24 +6,26 @@ InputManager::InputManager()
 {
 }
 
-bool InputManager::isSpriteClicked(sf::Sprite sprite, sf::Mouse::Button mouseButton, sf::RenderWindow &window)
+bool InputManager::isSpriteClicked(const sf::Sprite &sprite, sf::Mouse::Button mouseButton, sf::RenderWindow &window)
 {
-	sf::IntRect spriteRect(sprite.getPosition().x, sprite.getPosition().y, sprite.getPosition().x + sprite.getTextureRect().width*sprite.getScale().x, sprite.getPosition().y + sprite.getTextureRect().height*sprite.getScale().y); //hämta spritens storlek
-	//if (sf::Mouse::isButtonPressed(mouseButton))
-	//{
-	//	if (spriteRect.contains((sf::Vector2i)getMousePosition(window))) //om musen är inom spritens storlek return true
-	//	{
-	//		return true;
-	//	}
-	//}
-	if (spriteRect.contains(getMousePosition(window)))
+	sf::IntRect spriteRect(sprite.getPosition().x, sprite.getPosition().y, sprite.getTextureRect().width*sprite.getScale().x, sprite.getTextureRect().height*sprite.getScale().y); //hämta spritens storlek
+	if (spriteRect.contains(getMousePosition(window)))//om musen clickar på spriten inom spritens rect return true
 	{
-		if (sf::Mouse::isButtonPressed(mouseButton))
+		if (sf::Mouse::isButtonPressed(mouseButton))  
 		{
 			return true;
 		}
 	}
 	return false;
+}
+bool InputManager::isSpriteCollided(const sf::Sprite &sprite, sf::Mouse::Button mouseButton, sf::RenderWindow &window)
+{
+	sf::IntRect spriteRect(sprite.getPosition().x, sprite.getPosition().y, sprite.getTextureRect().width*sprite.getScale().x, sprite.getTextureRect().height*sprite.getScale().y); //hämta spritens storlek
+
+	if (spriteRect.contains((sf::Vector2i)getMousePosition(window))) //om musen är inom spritens storlek return true
+	{
+		return true;
+	}
 }
 bool InputManager::isMouseInsideWindow(sf::RenderWindow &window)
 {
