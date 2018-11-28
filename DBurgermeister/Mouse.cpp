@@ -1,10 +1,8 @@
 #include "pch.h"
 #include "Mouse.h"
-#include "ResourceManager.h"
 #include "InputManager.h"
 #include <iostream>
 
-ResourceManager resourceManager;
 InputManager inputManager;
 Mouse::Mouse()
 {
@@ -14,8 +12,8 @@ Mouse::Mouse()
 
 void Mouse::Draw(sf::RenderWindow &window)
 {
+	//window.draw(cursor2);
 	window.draw(cursor);
-	window.draw(cursor2);
 
 }
 void Mouse::Update(sf::RenderWindow &window)
@@ -28,7 +26,7 @@ void Mouse::Update(sf::RenderWindow &window)
 	if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) 
 	{
 		spriteOrigin = 39;
-		std::cout << "work?";
+		//std::cout << "work?";
 	}
 	else
 	{
@@ -38,7 +36,9 @@ void Mouse::Update(sf::RenderWindow &window)
 	{
 		if (cursor2.getPosition().x == 0 && cursor2.getPosition().y == 0)
 		{
-			cursor2.setPosition(window.getSize().x - cursor2.getTextureRect().width, window.getSize().y - cursor2.getTextureRect().height);
+			//cursor2.setPosition(window.getSize().x - cursor2.getTextureRect().width, window.getSize().y - cursor2.getTextureRect().height);
+			cursor2.setPosition(500, 500);
+
 		}
 		else
 		{

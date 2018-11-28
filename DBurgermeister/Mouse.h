@@ -1,11 +1,13 @@
 #ifndef MOUSE_HEADER
 #define MOUSE_HEADER
 #include <SFML/Graphics.hpp>
-
+#include "ResourceManager.h"
 
 class Mouse
 {
 public:
+	ResourceManager resourceManager;
+
 	Mouse();
 	~Mouse();
 

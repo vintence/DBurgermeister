@@ -1,6 +1,8 @@
 #ifndef RESOURCEMANAGER_HEADER
 #define	RESOURCEMANAGER_HEADER
 #include <SFML/Graphics.hpp>
+#include <iostream>
+#include <fstream>
 
 class ResourceManager
 {
@@ -21,4 +23,4 @@ private:
 	std::map<std::string, sf::Font>_fonts;
 };
 
-#endif // !RESOURCEMANAGER_HEADER
+#endif 

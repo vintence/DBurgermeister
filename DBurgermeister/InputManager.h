@@ -9,7 +9,10 @@ public:
 	InputManager();
 	~InputManager();
 
-	bool isSpriteClicked(sf::Sprite sprite, sf::Mouse::Button mouseButton, sf::RenderWindow &window);
+	sf::View view1;
+
+	bool isSpriteClicked(const sf::Sprite &sprite, sf::Mouse::Button mouseButton, sf::RenderWindow &window);
+	bool isSpriteCollided(const sf::Sprite &sprite, sf::Mouse::Button mouseButton, sf::RenderWindow &window);
 	bool isMouseInsideWindow(sf::RenderWindow &window);
 	sf::Vector2i getMousePosition(sf::RenderWindow &window);
 };
