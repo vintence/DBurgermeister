@@ -19,6 +19,9 @@
     <Filter Include="Resources">
       <UniqueIdentifier>{9b70ecc1-e2a2-4e85-88b8-ce0d29b36e22}</UniqueIdentifier>
     </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{a0fc23c0-60a3-4531-99bb-cee944d8e887}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -32,6 +35,12 @@
     </ClInclude>
     <ClInclude Include="InputManager.h">
       <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>UI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -49,6 +58,12 @@
     </ClCompile>
     <ClCompile Include="InputManager.cpp">
       <Filter>Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="UI.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>UI</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

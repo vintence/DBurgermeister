@@ -6,6 +6,9 @@ ResourceManager::ResourceManager()
 {
 	LoadTexture("cursor", "Resources/kien.png");
 	LoadTexture("spritetest", "Resources/spritetest.png");
+	LoadTexture("UI1", "Resources/UI.png");
+	LoadTexture("Start", "Resources/Start.png");
+	LoadTexture("Exit", "Resources/Exit.png");
 }
 
 void ResourceManager::LoadTexture(std::string textureName, std::string filename)
