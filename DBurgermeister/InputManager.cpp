@@ -2,10 +2,11 @@
 #include "InputManager.h"
 
 
-InputManager::InputManager()
-{
-}
 
+void InputManager::Init()
+{
+
+}
 bool InputManager::isSpriteClicked(const sf::Sprite &sprite, sf::Mouse::Button mouseButton, sf::RenderWindow &window)
 {
 	sf::IntRect spriteRect(sprite.getPosition().x, sprite.getPosition().y, sprite.getTextureRect().width*sprite.getScale().x, sprite.getTextureRect().height*sprite.getScale().y); //hämta spritens storlek
@@ -16,7 +17,6 @@ bool InputManager::isSpriteClicked(const sf::Sprite &sprite, sf::Mouse::Button m
 			return true;
 		}
 	}
-	return false;
 }
 bool InputManager::isSpriteCollided(const sf::Sprite &sprite, sf::Mouse::Button mouseButton, sf::RenderWindow &window)
 {

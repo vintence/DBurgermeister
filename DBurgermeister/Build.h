@@ -1,17 +1,13 @@
 #ifndef BUILD_HEADER
 #define BUILD_HEADER
 #include <SFML/Graphics.hpp>
-#include "ResourceManager.h"
-#include "InputManager.h"
 #include "Tile.h"
 #include <vector>
+
 
 class Build
 {
 public:
-	ResourceManager resourceManager;
-	InputManager inputManager;
-
 	Build();
 	~Build();
 
@@ -19,14 +15,26 @@ public:
 
 	void Update(sf::RenderWindow &window);
 	void Draw(sf::RenderWindow &window);
+	sf::Sprite GetSpriteButton(int spriteID);
 
 
 private:
 
-	sf::Sprite water;
-	sf::Sprite grass;
-	sf::Sprite ground;
-	sf::Sprite stone;
+	sf::Sprite weapon;
+	sf::Sprite consumer;
+	sf::Sprite house;
+	sf::Sprite road;
+	sf::Sprite entertain;
+	sf::Sprite empty;
+
+	sf::Sprite weaponButton;
+	sf::Sprite consumerButton;
+	sf::Sprite houseButton;
+	sf::Sprite roadButton;
+	sf::Sprite entertainButton;
+
+
+	int buildChoice = 5;
 
 
 	//sf::Sprite tile;
@@ -34,6 +42,7 @@ private:
 	int mapWidth;
 	int spriteOrigin;
 	int timer;
+	int clickDelay;
 
 	std::vector<Tile> myTiles;
 };

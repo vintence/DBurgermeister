@@ -6,15 +6,17 @@
 class InputManager
 {
 public:
-	InputManager();
 	~InputManager();
 
-	sf::View view1;
+	static void Init();
+	static bool isSpriteClicked(const sf::Sprite &sprite, sf::Mouse::Button mouseButton, sf::RenderWindow &window);
+	static bool isSpriteCollided(const sf::Sprite &sprite, sf::Mouse::Button mouseButton, sf::RenderWindow &window);
+	static bool isMouseInsideWindow(sf::RenderWindow &window);
+	static sf::Vector2i getMousePosition(sf::RenderWindow &window);
 
-	bool isSpriteClicked(const sf::Sprite &sprite, sf::Mouse::Button mouseButton, sf::RenderWindow &window);
-	bool isSpriteCollided(const sf::Sprite &sprite, sf::Mouse::Button mouseButton, sf::RenderWindow &window);
-	bool isMouseInsideWindow(sf::RenderWindow &window);
-	sf::Vector2i getMousePosition(sf::RenderWindow &window);
+private:
+	InputManager() {};
+
 };
 
 #endif
