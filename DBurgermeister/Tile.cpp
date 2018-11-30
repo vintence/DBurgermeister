@@ -14,30 +14,37 @@ Tile::Tile(const sf::Sprite &sprite, const sf::Vector2f &position, const TileTyp
 	myPosition = position;
 	myType = type;
 
-	if (type == Weapon)
+	switch (type)
 	{
-		//Stats för Weapon factory
+	case Weapon:
+	{
 		weaponPoint = 10;
 		population = -10;
 		moneyPoint = 10;
 		cost = 150;
-
+		break;
 	}
-	else if (type == House)
+	case House:
 	{
-		//Stats för Hus
 		weaponPoint = 0;
 		population = 5;
 		moneyPoint = 0;
 		cost = 50;
+		break;
 	}
-	else if (type == Consumer)
+	case Consumer:
 	{
-		//Stats för Consumer Building
 		weaponPoint = 0;
 		population = -5;
 		moneyPoint = 50;
 		cost = 150;
+		break;
+	}
+	case Road:
+	{
+		cost = 10;
+		break;
+	}
 	}
 }
 Tile::~Tile()
@@ -60,6 +67,13 @@ const int & Tile::GetPopulation()
 const int & Tile::GetMoneyPoint()
 {
 	return moneyPoint;
+}
+
+void Tile::SetNew(const sf::Sprite & sprite, const sf::Vector2f & position, const TileType & type)
+{
+	mySprite = sprite;
+	myPosition = position;
+	myType = type;
 }
 
 const sf::Sprite & Tile::GetSprite()

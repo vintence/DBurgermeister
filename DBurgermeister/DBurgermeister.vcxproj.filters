@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Mouse">
-      <UniqueIdentifier>{183f1a1e-7572-4c85-b8c0-e925fd494580}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Resources">
       <UniqueIdentifier>{9b70ecc1-e2a2-4e85-88b8-ce0d29b36e22}</UniqueIdentifier>
     </Filter>
@@ -25,13 +22,16 @@
     <Filter Include="Tiles">
       <UniqueIdentifier>{3ccb8171-a982-4d0d-8ea9-df7dc727ade0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Controls">
+      <UniqueIdentifier>{183f1a1e-7572-4c85-b8c0-e925fd494580}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Mouse.h">
-      <Filter>Mouse</Filter>
+      <Filter>Controls</Filter>
     </ClInclude>
     <ClInclude Include="ResourceManager.h">
       <Filter>Resources</Filter>
@@ -48,8 +48,8 @@
     <ClInclude Include="Tile.h">
       <Filter>Tiles</Filter>
     </ClInclude>
-    <ClInclude Include="Buildings.h">
-      <Filter>Resources</Filter>
+    <ClInclude Include="Events.h">
+      <Filter>Interfaces</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -60,7 +60,7 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Mouse.cpp">
-      <Filter>Mouse</Filter>
+      <Filter>Controls</Filter>
     </ClCompile>
     <ClCompile Include="ResourceManager.cpp">
       <Filter>Resources</Filter>
@@ -77,8 +77,8 @@
     <ClCompile Include="Tile.cpp">
       <Filter>Tiles</Filter>
     </ClCompile>
-    <ClCompile Include="Buildings.cpp">
-      <Filter>Resources</Filter>
+    <ClCompile Include="Events.cpp">
+      <Filter>Interfaces</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

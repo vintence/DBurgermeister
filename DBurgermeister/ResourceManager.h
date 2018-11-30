@@ -1,26 +1,26 @@
 #ifndef RESOURCEMANAGER_HEADER
 #define	RESOURCEMANAGER_HEADER
 #include <SFML/Graphics.hpp>
-#include <iostream>
-#include <fstream>
+
 
 class ResourceManager
 {
 public:
-	ResourceManager();
 	~ResourceManager();
 
-	void LoadTexture(std::string textureName, std::string filename);
-	sf::Texture &GetTexture(std::string textureName);
-	sf::Sprite &MakeSprite(std::string texturename, int topleftPosX, int topleftPosY, int sizeWidth, int sizeHeight); //gör en sprite utav en av texture som vi har laddat in. 
+	static void Init();
+	static void LoadTexture(std::string textureName, std::string fileName);
+	static sf::Texture &GetTexture(std::string textureName);
+	static sf::Sprite &MakeSprite(std::string textureName, int topleftPosX, int topleftPosY, int sizeWidth, int sizeHeight); //gör en sprite utav en av texture som vi har laddat in. 
 
-	void LoadFont(std::string fontName, std::string filename);
-	sf::Font &GetFont(std::string fontName);
+	static sf::Font &GetFont(std::string fontName);
+	static void LoadFont(std::string fontName, std::string fileName);
 
 
 private:
-	std::map<std::string, sf::Texture>_textures; //en container/lista typ, en _textures ska innehålla ett string(namn på det vi laddar in) och ett texture
-	std::map<std::string, sf::Font>_fonts;
+	ResourceManager() {};
+	static std::map<std::string, sf::Texture>_textures; //en container/lista typ, en _textures ska innehålla ett string(namn på det vi laddar in) och ett texture
+	static std::map<std::string, sf::Font>_fonts;
 };
 
 #endif 

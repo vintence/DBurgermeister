@@ -2,12 +2,15 @@
 #define TILE_HEADER
 #include <SFML/Graphics.hpp>
 
+
 enum TileType
 {
 	House,
 	Consumer,
 	Weapon,
-	Stone
+	Road,
+	Entertain,
+	Empty
 };
 
 class Tile
@@ -24,6 +27,7 @@ public:
 	const int &GetWeaponPoint();
 	const int &GetPopulation();
 	const int &GetMoneyPoint();
+	void SetNew(const sf::Sprite &sprite, const sf::Vector2f &position, const TileType &type);
 
 private:
 	sf::Sprite mySprite;

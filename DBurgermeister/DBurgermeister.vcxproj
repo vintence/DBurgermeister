@@ -158,7 +158,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Build.h" />
-    <ClInclude Include="Buildings.h" />
+    <ClInclude Include="Events.h" />
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="Mouse.h" />
     <ClInclude Include="pch.h" />
@@ -168,8 +168,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Build.cpp" />
-    <ClCompile Include="Buildings.cpp" />
     <ClCompile Include="DBurgermeister.cpp" />
+    <ClCompile Include="Events.cpp" />
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="Mouse.cpp" />
     <ClCompile Include="pch.cpp">
