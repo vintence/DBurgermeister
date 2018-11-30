@@ -1,2 +1,5 @@
-﻿  Events.cpp
-  DBurgermeister.vcxproj -> C:\Users\trungkin.le\Documents\Visual Studio 2017\Projects\DBurgermeister\Debug\DBurgermeister.exe
+﻿  Build.cpp
+k:\github\dburgermeister\dburgermeister\build.cpp(120): warning C4018: '<': signed/unsigned mismatch
+k:\github\dburgermeister\dburgermeister\build.cpp(174): warning C4018: '<': signed/unsigned mismatch
+k:\github\dburgermeister\dburgermeister\build.cpp(166): warning C4715: 'Build::GetSpriteButton': not all control paths return a value
+  DBurgermeister.vcxproj -> K:\github\DBurgermeister\Debug\DBurgermeister.exe

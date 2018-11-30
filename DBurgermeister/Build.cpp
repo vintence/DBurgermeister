@@ -34,9 +34,7 @@ Build::Build()
 		25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,
 		25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,
 		25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,
-		25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,
-
-
+		25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,10,12,11,25,25,25
 	};
 	weapon = ResourceManager::MakeSprite("spritesheet", 320, 0, 32, 32); //define sprite i classen gör att den inte åker tillbaka till origin efter triggered
 	consumer = ResourceManager::MakeSprite("spritesheet", 352, 0, 32, 32); //define sprite i classen gör att den inte åker tillbaka till origin efter triggered
@@ -60,9 +58,10 @@ Build::Build()
 	timer = 0;
 	clickDelay = 5000;
 
-	int tileCountWidth = (1600 - 128) / 32;
+	int tileCountWidth = 46;
+	int tileCountHeight = 25; //ska vara 1 från totalen pga börjar från 0
 	int y = 0;
-	for (int x = 0; x < tileCountWidth || y < 26; x++)
+	for (int x = 0; x < tileCountWidth || y < tileCountHeight; x++)
 	{
 		if (x >= tileCountWidth)
 		{
