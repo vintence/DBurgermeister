@@ -43,6 +43,8 @@ private:
 	int spriteOrigin;
 	int timer;
 	int clickDelay;
+	sf::Vector2f tileScale;
+	sf::Vector2f buttonScale;
 
 	std::vector<Tile> myTiles;
 };

@@ -36,22 +36,43 @@ Build::Build()
 		25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,
 		25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,10,12,11,25,25,25
 	};
-	weapon = ResourceManager::MakeSprite("spritesheet", 320, 0, 32, 32); //define sprite i classen gör att den inte åker tillbaka till origin efter triggered
-	consumer = ResourceManager::MakeSprite("spritesheet", 352, 0, 32, 32); //define sprite i classen gör att den inte åker tillbaka till origin efter triggered
-	house = ResourceManager::MakeSprite("spritesheet", 384, 0, 32, 32); //define sprite i classen gör att den inte åker tillbaka till origin efter triggered
-	road = ResourceManager::MakeSprite("spritesheet", 320, 32, 32, 32); //define sprite i classen gör att den inte åker tillbaka till origin efter triggered
-	entertain = ResourceManager::MakeSprite("spritesheet", 352, 32, 32, 32);
-	empty = ResourceManager::MakeSprite("spritesheet", 384, 32, 32, 32);
 
-	weaponButton = ResourceManager::MakeSprite("spritesheet", 0, 0, 64, 64);
-	consumerButton = ResourceManager::MakeSprite("spritesheet", 64, 0, 64, 64);
-	houseButton = ResourceManager::MakeSprite("spritesheet", 128, 0, 64, 64);
-	roadButton = ResourceManager::MakeSprite("spritesheet", 192, 0, 64, 64);
-	entertainButton = ResourceManager::MakeSprite("spritesheet", 256, 0, 64, 64);
+	tileScale = sf::Vector2f(0.25f, 0.25f);
+	buttonScale = sf::Vector2f(0.5f, 0.5f);
+
+	//weapon = ResourceManager::MakeSprite("spritesheet", 320, 0, 32, 32); //define sprite i classen gör att den inte åker tillbaka till origin efter triggered
+	//consumer = ResourceManager::MakeSprite("spritesheet", 352, 0, 32, 32); //define sprite i classen gör att den inte åker tillbaka till origin efter triggered
+	//house = ResourceManager::MakeSprite("spritesheet", 384, 0, 32, 32); //define sprite i classen gör att den inte åker tillbaka till origin efter triggered
+	//road = ResourceManager::MakeSprite("spritesheet", 320, 32, 32, 32); //define sprite i classen gör att den inte åker tillbaka till origin efter triggered
+	//entertain = ResourceManager::MakeSprite("spritesheet", 352, 32, 32, 32);
+	//empty = ResourceManager::MakeSprite("spritesheet", 384, 32, 32, 32);
+	weapon = ResourceManager::MakeSprite("resourceSheet", 0, 0, 128, 128); //define sprite i classen gör att den inte åker tillbaka till origin efter triggered
+	weapon.setScale(tileScale);
+	consumer = ResourceManager::MakeSprite("resourceSheet", 384, 0, 128, 128); //define sprite i classen gör att den inte åker tillbaka till origin efter triggered
+	consumer.setScale(tileScale);
+	house = ResourceManager::MakeSprite("resourceSheet", 128, 0, 128, 128); //define sprite i classen gör att den inte åker tillbaka till origin efter triggered
+	house.setScale(tileScale);
+	road = ResourceManager::MakeSprite("resourceSheet", 512, 0, 128, 128); //define sprite i classen gör att den inte åker tillbaka till origin efter triggered
+	road.setScale(tileScale);
+	entertain = ResourceManager::MakeSprite("resourceSheet", 256, 0, 128, 128);
+	entertain.setScale(tileScale);
+	empty = ResourceManager::MakeSprite("resourceSheet", 640, 0, 128, 128);
+	empty.setScale(tileScale);
+
+	weaponButton = ResourceManager::MakeSprite("resourceSheet", 0, 0, 128, 128);
+	consumerButton = ResourceManager::MakeSprite("resourceSheet", 384, 0, 128, 128);
+	houseButton = ResourceManager::MakeSprite("resourceSheet", 128, 0, 128, 128);
+	roadButton = ResourceManager::MakeSprite("resourceSheet", 512, 0, 128, 128);
+	entertainButton = ResourceManager::MakeSprite("resourceSheet", 256, 0, 128, 128);
+	weaponButton.setScale(buttonScale);
 	weaponButton.setPosition(12, 12);
+	consumerButton.setScale(buttonScale);
 	consumerButton.setPosition(12, 126);
+	houseButton.setScale(buttonScale);
 	houseButton.setPosition(12, 252);
+	roadButton.setScale(buttonScale);
 	roadButton.setPosition(12, 378);
+	entertainButton.setScale(buttonScale);
 	entertainButton.setPosition(12, 504);
 
 
@@ -173,37 +194,37 @@ void Build::Update(sf::RenderWindow &window)
 	sf::FloatRect tempMouseCollision;
 	for (int i = 0; i < myTiles.size(); i++)
 	{
-		if (InputManager::isSpriteClicked(weaponButton, sf::Mouse::Button::Left, window) && timer <= 0)
+		if (InputManager::isSpriteClicked(weaponButton, sf::Mouse::Button::Left, window) && timer <= 0 && buildChoice != 0)
 		{
 			buildChoice = 0;
 			timer = clickDelay;
 			std::cout << "choice 0\n";
 		}
-		else if (InputManager::isSpriteClicked(consumerButton, sf::Mouse::Button::Left, window) && timer <= 0)
+		else if (InputManager::isSpriteClicked(consumerButton, sf::Mouse::Button::Left, window) && timer <= 0 && buildChoice != 1)
 		{
 			buildChoice = 1;
 			timer = clickDelay;
 			std::cout << "choice 1\n";
 		}
-		else if (InputManager::isSpriteClicked(houseButton, sf::Mouse::Button::Left, window) && timer <= 0)
+		else if (InputManager::isSpriteClicked(houseButton, sf::Mouse::Button::Left, window) && timer <= 0 && buildChoice != 2)
 		{
 			buildChoice = 2;
 			timer = clickDelay;
 			std::cout << "choice 2\n";
 		}
-		else if (InputManager::isSpriteClicked(roadButton, sf::Mouse::Button::Left, window) && timer <= 0)
+		else if (InputManager::isSpriteClicked(roadButton, sf::Mouse::Button::Left, window) && timer <= 0 && buildChoice != 3)
 		{
 			buildChoice = 3;
 			timer = clickDelay;
 			std::cout << "choice 3\n";
 		}
-		else if (InputManager::isSpriteClicked(entertainButton, sf::Mouse::Button::Left, window) && timer <= 0)
+		else if (InputManager::isSpriteClicked(entertainButton, sf::Mouse::Button::Left, window) && timer <= 0 && buildChoice != 4)
 		{
 			buildChoice = 4;
 			timer = clickDelay;
 			std::cout << "choice 3\n";
 		}
-		else if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Right) && timer <= 0)
+		else if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Right) && timer <= 0 && buildChoice != 5)
 		{
 			buildChoice = 5;
 			timer = clickDelay;
