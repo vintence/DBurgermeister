@@ -9,33 +9,45 @@ Build::Build()
 {
 	int map[] =
 	{
-		25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,
-		25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,
-		25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,
-		25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,
-		25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,
-		25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,
-		25,25,25,25,25,25,25,25,25,10,10,10,10,25,25,10,10,25,25,25,25,25,25,25,25,25,25,25,25,12,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,
-		25,25,25,25,25,25,25,25,25,25,25,25,10,10,10,10,10,10,10,10,25,25,25,25,25,25,25,25,25,12,12,12,25,25,25,25,25,25,25,25,25,25,25,25,25,25,
-		25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,12,12,25,25,25,25,25,25,25,25,25,25,25,25,25,
-		25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,12,12,25,25,25,25,25,25,25,25,25,25,25,25,
-		25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,11,11,25,25,25,25,25,25,12,25,25,25,25,25,25,25,25,25,25,25,25,
-		25,25,25,25,25,25,25,25,25,25,25,23,23,25,25,25,25,25,25,25,25,25,25,11,11,11,25,25,25,25,25,25,12,12,25,25,25,25,25,25,25,25,25,25,25,25,
-		25,25,25,25,25,25,25,25,25,25,23,23,25,25,25,11,11,11,11,11,11,11,11,11,25,25,25,25,25,25,25,12,12,25,25,25,25,25,25,25,25,25,25,25,25,25,
-		25,25,25,25,25,25,25,25,25,23,23,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,12,12,25,25,25,25,25,25,25,25,25,25,25,25,25,25,
-		25,25,25,25,25,25,25,25,25,23,23,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,12,12,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,
-		25,25,25,25,25,25,25,25,25,25,23,23,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,
-		25,25,25,25,25,25,25,25,25,25,25,23,23,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,
-		25,25,25,25,25,25,25,25,25,25,25,25,23,23,25,25,25,25,25,25,25,25,25,25,25,25,24,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,
-		25,25,25,25,25,25,25,25,25,25,25,25,25,23,23,23,25,25,25,25,25,25,25,25,25,25,24,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,
-		25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,23,23,23,23,25,25,25,25,25,25,25,24,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,
-		25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,24,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,
-		25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,24,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,
-		25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,
-		25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,
-		25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,
-		25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,10,12,11,25,25,25
+		5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+		5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+		5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+		5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+		5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+		5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+		5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+		5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+		5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+		5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+		5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+		5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+		5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+		5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+		5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+		5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+		5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+		5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+		5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+		5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+		5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+		5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+		5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+		5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+		5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+		5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
 	};
+
+	weaponText.setFont(ResourceManager::GetFont("font"));
+	weaponText.setCharacterSize(30);
+	weaponText.setFillColor(sf::Color::Black);
+	weaponText.setPosition(1300, 910);
+	weaponCountText = '0';
+	weaponLabel.setFont(ResourceManager::GetFont("font"));
+	weaponLabel.setCharacterSize(30);
+	weaponLabel.setFillColor(sf::Color::Black);
+	weaponLabel.setPosition(1160, 910);
+	weaponLabel.setString("Weapon(s):");
+
 
 	tileScale = sf::Vector2f(0.25f, 0.25f);
 	buttonScale = sf::Vector2f(0.5f, 0.5f);
@@ -47,16 +59,16 @@ Build::Build()
 	//entertain = ResourceManager::MakeSprite("spritesheet", 352, 32, 32, 32);
 	//empty = ResourceManager::MakeSprite("spritesheet", 384, 32, 32, 32);
 	weapon = ResourceManager::MakeSprite("resourceSheet", 0, 0, 128, 128); //define sprite i classen gör att den inte åker tillbaka till origin efter triggered
-	weapon.setScale(tileScale);
 	consumer = ResourceManager::MakeSprite("resourceSheet", 384, 0, 128, 128); //define sprite i classen gör att den inte åker tillbaka till origin efter triggered
-	consumer.setScale(tileScale);
 	house = ResourceManager::MakeSprite("resourceSheet", 128, 0, 128, 128); //define sprite i classen gör att den inte åker tillbaka till origin efter triggered
-	house.setScale(tileScale);
 	road = ResourceManager::MakeSprite("resourceSheet", 512, 0, 128, 128); //define sprite i classen gör att den inte åker tillbaka till origin efter triggered
-	road.setScale(tileScale);
 	entertain = ResourceManager::MakeSprite("resourceSheet", 256, 0, 128, 128);
-	entertain.setScale(tileScale);
 	empty = ResourceManager::MakeSprite("resourceSheet", 640, 0, 128, 128);
+	weapon.setScale(tileScale);
+	consumer.setScale(tileScale);
+	house.setScale(tileScale);
+	road.setScale(tileScale);
+	entertain.setScale(tileScale);
 	empty.setScale(tileScale);
 
 	weaponButton = ResourceManager::MakeSprite("resourceSheet", 0, 0, 128, 128);
@@ -75,14 +87,15 @@ Build::Build()
 	entertainButton.setScale(buttonScale);
 	entertainButton.setPosition(12, 504);
 
-
+	//clickdelay efter varje click, så att man inte råka klickar 2 gånger på en sak samtidigt.
 	timer = 0;
-	clickDelay = 5000;
+	clickDelay = 1;
 
+	//ritar ut banan efter map
 	int tileCountWidth = 46;
 	int tileCountHeight = 25; //ska vara 1 från totalen pga börjar från 0
 	int y = 0;
-	for (int x = 0; x < tileCountWidth || y < tileCountHeight; x++)
+	for (int x = 0; x < tileCountWidth || y < tileCountHeight; x++) 
 	{
 		if (x >= tileCountWidth)
 		{
@@ -92,36 +105,36 @@ Build::Build()
 		int mapTileCount = x + y * tileCountWidth; //det antal nummer på den tile där
 		switch (map[mapTileCount])
 		{
-		case 10:
+		case 0:
 		{
 			myTiles.push_back(Tile(weapon, sf::Vector2f(weapon.getPosition().x + 128 + (x * weapon.getGlobalBounds().width), weapon.getPosition().y + (y * weapon.getGlobalBounds().height)), Weapon));
 			break;
 		}
-		case 11:
+		case 3:
 		{
 			myTiles.push_back(Tile(consumer, sf::Vector2f(consumer.getPosition().x + 128 + (x * consumer.getGlobalBounds().width), consumer.getPosition().y + (y * consumer.getGlobalBounds().height)), Consumer));
 
 			break;
 		}
-		case 12:
+		case 1:
 		{
 			myTiles.push_back(Tile(house, sf::Vector2f(house.getPosition().x + 128 + (x * house.getGlobalBounds().width), house.getPosition().y + (y * house.getGlobalBounds().height)), House));
 
 			break;
 		}
-		case 23:
+		case 4:
 		{
 			myTiles.push_back(Tile(road, sf::Vector2f(road.getPosition().x + 128 + (x * road.getGlobalBounds().width), road.getPosition().y + (y * road.getGlobalBounds().height)), Road));
 
 			break;
 		}
-		case 24:
+		case 2:
 		{
 			myTiles.push_back(Tile(entertain, sf::Vector2f(entertain.getPosition().x + 128 + (x * entertain.getGlobalBounds().width), entertain.getPosition().y + (y * entertain.getGlobalBounds().height)), Entertain));
 
 			break;
 		}
-		case 25:
+		case 5:
 		{
 			myTiles.push_back(Tile(empty, sf::Vector2f(empty.getPosition().x + 128 + (x * empty.getGlobalBounds().width), empty.getPosition().y + (y * empty.getGlobalBounds().height)), Empty));
 
@@ -129,10 +142,7 @@ Build::Build()
 		}
 		}
 	}
-	/*for (int i = 0; i < 10; i++)
-	{
-		myTiles.push_back(Tile(water));
-	}*/
+	//ritar ut banan efter map
 
 }
 
@@ -142,19 +152,15 @@ void Build::Draw(sf::RenderWindow &window)
 	{
 		window.draw(myTiles[i].GetSprite());
 	}
-
 	window.draw(weaponButton);
 	window.draw(consumerButton);
 	window.draw(houseButton);
 	window.draw(roadButton);
 	window.draw(entertainButton);
-
-	//window.draw(grass);
-	//window.draw(ground);
-	//window.draw(stone);
-	//window.draw(water);
+	window.draw(weaponText);
+	window.draw(weaponLabel);
 }
-sf::Sprite Build::GetSpriteButton(int spriteButtonID)
+sf::Sprite Build::GetSpriteButton(int spriteButtonID) //använder för att få spritens properties till att använda i mouse klassen
 {
 	switch (spriteButtonID)
 	{
@@ -188,11 +194,12 @@ sf::Sprite Build::GetSpriteButton(int spriteButtonID)
 void Build::Update(sf::RenderWindow &window)
 {
 	Draw(window);
-
-	//mapWidth = window.getSize().x/32;
-	//mapHeight = window.getSize().y/32;
 	sf::FloatRect tempMouseCollision;
-	for (int i = 0; i < myTiles.size(); i++)
+
+	weaponText.setString(weaponCountText);
+
+	//om man clicka på en byggnad händer 
+	for (int i = 0; i < myTiles.size(); i++) //for loopen går genom alla tile på mappen.
 	{
 		if (InputManager::isSpriteClicked(weaponButton, sf::Mouse::Button::Left, window) && timer <= 0 && buildChoice != 0)
 		{
@@ -234,18 +241,21 @@ void Build::Update(sf::RenderWindow &window)
 		{
 			case 0:
 			{
-				if (InputManager::isSpriteClicked(myTiles[i].GetSprite(), sf::Mouse::Button::Left, window) && timer <= 0 && myTiles[i].GetType() != Weapon)
+				if (InputManager::isSpriteClicked(myTiles[i].GetSprite(), sf::Mouse::Button::Left, window) && timer <= 0 && myTiles[i].GetType() != Weapon && myTiles[i].GetType() != Consumer && myTiles[i].GetType() != House && myTiles[i].GetType() != Road && myTiles[i].GetType() != Entertain)
 				{
 					timer = clickDelay;
 					//myTiles.push_back(Tile(road, sf::Vector2f(myTiles[i].GetPosition().x, myTiles[i].GetPosition().y), Road)); //skapa en ny lager av tile på den ställe
 					myTiles[i] = Tile(weapon, sf::Vector2f(myTiles[i].GetPosition().x, myTiles[i].GetPosition().y), Weapon);
+					weaponCount += 1;
+					weaponCountText = std::to_string( weaponCount * myTiles[i].GetWeaponPoint());
+					std::cout << weaponCount << std::endl;
 					std::cout << myTiles[i].GetPosition().x << myTiles[i].GetPosition().y << std::endl;
 				}
 				break;
 			}
 			case 1:
 			{
-				if (InputManager::isSpriteClicked(myTiles[i].GetSprite(), sf::Mouse::Button::Left, window) && timer <= 0 && myTiles[i].GetType() != Consumer)
+				if (InputManager::isSpriteClicked(myTiles[i].GetSprite(), sf::Mouse::Button::Left, window) && timer <= 0 && myTiles[i].GetType() != Weapon && myTiles[i].GetType() != Consumer && myTiles[i].GetType() != House && myTiles[i].GetType() != Road && myTiles[i].GetType() != Entertain)
 				{
 					timer = clickDelay;
 					//myTiles.push_back(Tile(house, sf::Vector2f(myTiles[i].GetPosition().x, myTiles[i].GetPosition().y), House)); //skapa en ny lager av tile på den ställe
@@ -256,7 +266,7 @@ void Build::Update(sf::RenderWindow &window)
 			}
 			case 2:
 			{
-				if (InputManager::isSpriteClicked(myTiles[i].GetSprite(), sf::Mouse::Button::Left, window) && timer <= 0 && myTiles[i].GetType() != House)
+				if (InputManager::isSpriteClicked(myTiles[i].GetSprite(), sf::Mouse::Button::Left, window) && timer <= 0 && myTiles[i].GetType() != Weapon && myTiles[i].GetType() != Consumer && myTiles[i].GetType() != House && myTiles[i].GetType() != Road && myTiles[i].GetType() != Entertain)
 				{
 					timer = clickDelay;
 					//myTiles.push_back(Tile(house, sf::Vector2f(myTiles[i].GetPosition().x, myTiles[i].GetPosition().y), House)); //skapa en ny lager av tile på den ställe
@@ -267,7 +277,7 @@ void Build::Update(sf::RenderWindow &window)
 			}
 			case 3:
 			{
-				if (InputManager::isSpriteClicked(myTiles[i].GetSprite(), sf::Mouse::Button::Left, window) && timer <= 0 && myTiles[i].GetType() != Road)
+				if (InputManager::isSpriteClicked(myTiles[i].GetSprite(), sf::Mouse::Button::Left, window) && timer <= 0 && myTiles[i].GetType() != Weapon && myTiles[i].GetType() != Consumer && myTiles[i].GetType() != House && myTiles[i].GetType() != Road && myTiles[i].GetType() != Entertain)
 				{
 					timer = clickDelay;
 					//myTiles.push_back(Tile(house, sf::Vector2f(myTiles[i].GetPosition().x, myTiles[i].GetPosition().y), House)); //skapa en ny lager av tile på den ställe
@@ -278,7 +288,7 @@ void Build::Update(sf::RenderWindow &window)
 			}
 			case 4:
 			{
-				if (InputManager::isSpriteClicked(myTiles[i].GetSprite(), sf::Mouse::Button::Left, window) && timer <= 0 && myTiles[i].GetType() != Entertain)
+				if (InputManager::isSpriteClicked(myTiles[i].GetSprite(), sf::Mouse::Button::Left, window) && timer <= 0 && myTiles[i].GetType() != Weapon && myTiles[i].GetType() != Consumer && myTiles[i].GetType() != House && myTiles[i].GetType() != Road && myTiles[i].GetType() != Entertain)
 				{
 					timer = clickDelay;
 					//myTiles.push_back(Tile(house, sf::Vector2f(myTiles[i].GetPosition().x, myTiles[i].GetPosition().y), House)); //skapa en ny lager av tile på den ställe
@@ -288,6 +298,8 @@ void Build::Update(sf::RenderWindow &window)
 				break;
 			}
 		}
+		//om man clicker en byggnad händer
+
 		//if (InputManager::isSpriteClicked(myTiles[i].GetSprite(), sf::Mouse::Button::Left, window) && timer <= 0 && buildChoice == 1)
 		//{
 		//	myTiles.push_back(Tile(stone, sf::Vector2f(myTiles[i].GetPosition().x, myTiles[i].GetPosition().y), Stone));
@@ -310,6 +322,11 @@ void Build::Update(sf::RenderWindow &window)
 		//	//}
 		//	//return;
 		//}
+
+		//visuellt stats text
+		
+		
+
 
 		timer--;
 	}

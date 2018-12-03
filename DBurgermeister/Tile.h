@@ -27,7 +27,6 @@ public:
 	const int &GetWeaponPoint();
 	const int &GetPopulation();
 	const int &GetMoneyPoint();
-	void SetNew(const sf::Sprite &sprite, const sf::Vector2f &position, const TileType &type);
 
 private:
 	sf::Sprite mySprite;

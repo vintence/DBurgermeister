@@ -1,5 +1,14 @@
 ﻿  Build.cpp
-c:\users\trungkin.le\documents\visual studio 2017\projects\dburgermeister\dburgermeister\build.cpp(141): warning C4018: '<': signed/unsigned mismatch
-c:\users\trungkin.le\documents\visual studio 2017\projects\dburgermeister\dburgermeister\build.cpp(195): warning C4018: '<': signed/unsigned mismatch
-c:\users\trungkin.le\documents\visual studio 2017\projects\dburgermeister\dburgermeister\build.cpp(187): warning C4715: 'Build::GetSpriteButton': not all control paths return a value
-  DBurgermeister.vcxproj -> C:\Users\trungkin.le\Documents\Visual Studio 2017\Projects\DBurgermeister\Debug\DBurgermeister.exe
+k:\github\dburgermeister\dburgermeister\build.cpp(151): warning C4018: '<': signed/unsigned mismatch
+k:\github\dburgermeister\dburgermeister\build.cpp(202): warning C4018: '<': signed/unsigned mismatch
+  DBurgermeister.cpp
+k:\github\dburgermeister\dburgermeister\dburgermeister.cpp(23): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Mouse.cpp
+k:\github\dburgermeister\dburgermeister\mouse.cpp(49): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
+k:\github\dburgermeister\dburgermeister\build.cpp(193): warning C4715: 'Build::GetSpriteButton': not all control paths return a value
+  DBurgermeister.vcxproj -> K:\github\DBurgermeister\Debug\DBurgermeister.exe

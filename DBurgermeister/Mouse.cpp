@@ -44,9 +44,9 @@ void Mouse::Draw(sf::RenderWindow &window)
 void Mouse::Update(sf::RenderWindow &window)
 {
 	Draw(window);
-	cursor = ResourceManager::MakeSprite("cursor", spriteOrigin, 0, 38.5f, 23); //define sprite i update gör att den åker tillbaka till origin efter triggered
 
 	//mouse + mouse click animation
+	cursor = ResourceManager::MakeSprite("cursor", spriteOrigin, 0, 38.5f, 23); //define sprite i update gör att den åker tillbaka till origin efter triggered
 	if (InputManager::isMouseInsideWindow(window))
 	{
 		cursor.setPosition(sf::Vector2f(InputManager::getMousePosition(window)));
