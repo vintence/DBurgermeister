@@ -69,13 +69,6 @@ const int & Tile::GetMoneyPoint()
 	return moneyPoint;
 }
 
-void Tile::SetNew(const sf::Sprite & sprite, const sf::Vector2f & position, const TileType & type)
-{
-	mySprite = sprite;
-	myPosition = position;
-	myType = type;
-}
-
 const sf::Sprite & Tile::GetSprite()
 {
 	return mySprite;

@@ -11,8 +11,8 @@ Mouse::Mouse()
 	spriteOrigin = 0;
 	//cursor2 = resourceManager.MakeSprite("spritetest", 0, 0, 64, 64); //define sprite i classen gör att den inte åker tillbaka till origin efter triggered
 	iconMiddle = sf::Vector2f(32/2, 32/2);
-	iconScale = sf::Vector2f(0.5f, 0.5f);
-	iconOrigin = sf::Vector2f(-(64*iconScale.x), -(64*iconScale.y));
+	iconScale = sf::Vector2f(0.25f, 0.25f);
+	iconOrigin = sf::Vector2f(-(128*iconScale.x), -(128*iconScale.y));
 	weaponIcon = build.GetSpriteButton(0);
 	weaponIcon.scale(iconScale);
 	weaponIcon.setPosition(iconOrigin);
@@ -44,8 +44,9 @@ void Mouse::Draw(sf::RenderWindow &window)
 void Mouse::Update(sf::RenderWindow &window)
 {
 	Draw(window);
-	cursor = ResourceManager::MakeSprite("cursor", spriteOrigin, 0, 38.5f, 23); //define sprite i update gör att den åker tillbaka till origin efter triggered
 
+	//mouse + mouse click animation
+	cursor = ResourceManager::MakeSprite("cursor", spriteOrigin, 0, 38.5f, 23); //define sprite i update gör att den åker tillbaka till origin efter triggered
 	if (InputManager::isMouseInsideWindow(window))
 	{
 		cursor.setPosition(sf::Vector2f(InputManager::getMousePosition(window)));
@@ -59,16 +60,22 @@ void Mouse::Update(sf::RenderWindow &window)
 	{
 		spriteOrigin = 0;
 	}
+	//mouse + mouse click animation
 	
+	//click icon code
 	for (int i = 0; i < 5; i++)
 	{
 		if (InputManager::isSpriteClicked(build.GetSpriteButton(i), sf::Mouse::Button::Left, window))
 		{
 			isBuildingSelected = i;
 		}
-		if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Right))
+		if (isBuildingSelected != 5)
 		{
-			isBuildingSelected = 5;
+			if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Right))
+			{
+				isBuildingSelected = 5;
+				std::cout << "asddddddddd";
+			}
 		}
 	}
 	switch (isBuildingSelected)
@@ -176,6 +183,7 @@ void Mouse::Update(sf::RenderWindow &window)
 		roadIcon.setPosition(iconOrigin);
 		entertainIcon.setPosition(iconOrigin);
 	}*/
+	//click icon code
 
 }
 

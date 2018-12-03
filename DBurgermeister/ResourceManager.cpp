@@ -13,6 +13,7 @@ void ResourceManager::Init()
 	LoadTexture("spritesheet", "Resources/spritesheetTest.png");
 	LoadTexture("eventCard", "Resources/Event.png");
 	LoadTexture("button", "Resources/button.png");
+	LoadTexture("resourceSheet", "Resources/TileSheet.png");
 
 	LoadFont("font", "Resources/testingFont.ttf");
 	LoadFont("titleFont", "Resources/Pride.otf");
