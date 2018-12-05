@@ -50,7 +50,6 @@ Build::Build()
 
 
 	tileScale = sf::Vector2f(0.25f, 0.25f);
-	buttonScale = sf::Vector2f(0.5f, 0.5f);
 
 	//weapon = ResourceManager::MakeSprite("spritesheet", 320, 0, 32, 32); //define sprite i classen gör att den inte åker tillbaka till origin efter triggered
 	//consumer = ResourceManager::MakeSprite("spritesheet", 352, 0, 32, 32); //define sprite i classen gör att den inte åker tillbaka till origin efter triggered
@@ -70,22 +69,6 @@ Build::Build()
 	road.setScale(tileScale);
 	entertain.setScale(tileScale);
 	empty.setScale(tileScale);
-
-	weaponButton = ResourceManager::MakeSprite("resourceSheet", 0, 0, 128, 128);
-	consumerButton = ResourceManager::MakeSprite("resourceSheet", 384, 0, 128, 128);
-	houseButton = ResourceManager::MakeSprite("resourceSheet", 128, 0, 128, 128);
-	roadButton = ResourceManager::MakeSprite("resourceSheet", 512, 0, 128, 128);
-	entertainButton = ResourceManager::MakeSprite("resourceSheet", 256, 0, 128, 128);
-	weaponButton.setScale(buttonScale);
-	weaponButton.setPosition(12, 12);
-	consumerButton.setScale(buttonScale);
-	consumerButton.setPosition(12, 126);
-	houseButton.setScale(buttonScale);
-	houseButton.setPosition(12, 252);
-	roadButton.setScale(buttonScale);
-	roadButton.setPosition(12, 378);
-	entertainButton.setScale(buttonScale);
-	entertainButton.setPosition(12, 504);
 
 	//clickdelay efter varje click, så att man inte råka klickar 2 gånger på en sak samtidigt.
 	timer = 0;
@@ -152,44 +135,8 @@ void Build::Draw(sf::RenderWindow &window)
 	{
 		window.draw(myTiles[i].GetSprite());
 	}
-	window.draw(weaponButton);
-	window.draw(consumerButton);
-	window.draw(houseButton);
-	window.draw(roadButton);
-	window.draw(entertainButton);
 	window.draw(weaponText);
 	window.draw(weaponLabel);
-}
-sf::Sprite Build::GetSpriteButton(int spriteButtonID) //använder för att få spritens properties till att använda i mouse klassen
-{
-	switch (spriteButtonID)
-	{
-	case 0:
-	{
-		return weaponButton;
-		break;
-	}
-	case 1:
-	{
-		return consumerButton;
-		break;
-	}
-	case 2:
-	{
-		return houseButton;
-		break;
-	}
-	case 3:
-	{
-		return roadButton;
-		break;
-	}
-	case 4:
-	{
-		return entertainButton;
-		break;
-	}
-	}
 }
 void Build::Update(sf::RenderWindow &window)
 {
@@ -201,31 +148,31 @@ void Build::Update(sf::RenderWindow &window)
 	//om man clicka på en byggnad händer 
 	for (int i = 0; i < myTiles.size(); i++) //for loopen går genom alla tile på mappen.
 	{
-		if (InputManager::isSpriteClicked(weaponButton, sf::Mouse::Button::Left, window) && timer <= 0 && buildChoice != 0)
+		if (InputManager::isSpriteClicked(ui.GetSpriteButton(0), sf::Mouse::Button::Left, window) && timer <= 0 && buildChoice != 0)
 		{
 			buildChoice = 0;
 			timer = clickDelay;
 			std::cout << "choice 0\n";
 		}
-		else if (InputManager::isSpriteClicked(consumerButton, sf::Mouse::Button::Left, window) && timer <= 0 && buildChoice != 1)
+		else if (InputManager::isSpriteClicked(ui.GetSpriteButton(1), sf::Mouse::Button::Left, window) && timer <= 0 && buildChoice != 1)
 		{
 			buildChoice = 1;
 			timer = clickDelay;
 			std::cout << "choice 1\n";
 		}
-		else if (InputManager::isSpriteClicked(houseButton, sf::Mouse::Button::Left, window) && timer <= 0 && buildChoice != 2)
+		else if (InputManager::isSpriteClicked(ui.GetSpriteButton(2), sf::Mouse::Button::Left, window) && timer <= 0 && buildChoice != 2)
 		{
 			buildChoice = 2;
 			timer = clickDelay;
 			std::cout << "choice 2\n";
 		}
-		else if (InputManager::isSpriteClicked(roadButton, sf::Mouse::Button::Left, window) && timer <= 0 && buildChoice != 3)
+		else if (InputManager::isSpriteClicked(ui.GetSpriteButton(3), sf::Mouse::Button::Left, window) && timer <= 0 && buildChoice != 3)
 		{
 			buildChoice = 3;
 			timer = clickDelay;
 			std::cout << "choice 3\n";
 		}
-		else if (InputManager::isSpriteClicked(entertainButton, sf::Mouse::Button::Left, window) && timer <= 0 && buildChoice != 4)
+		else if (InputManager::isSpriteClicked(ui.GetSpriteButton(4), sf::Mouse::Button::Left, window) && timer <= 0 && buildChoice != 4)
 		{
 			buildChoice = 4;
 			timer = clickDelay;
@@ -325,12 +272,6 @@ void Build::Update(sf::RenderWindow &window)
 		//	//}
 		//	//return;
 		//}
-
-		//visuellt stats text
-		
-		
-
-
 		timer--;
 	}
 }

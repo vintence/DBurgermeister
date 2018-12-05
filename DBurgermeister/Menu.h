@@ -11,6 +11,7 @@ public:
 	void UpdateMenu(sf::RenderWindow &window);
 	void DrawMenu(sf::RenderWindow &window);
 
+private:
 	sf::Sprite Start;
 	sf::Sprite Exit;
 
