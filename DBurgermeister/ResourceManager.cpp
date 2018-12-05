@@ -7,6 +7,12 @@ ResourceManager::ResourceManager()
 	LoadTexture("cursor", "Resources/kien.png");
 	LoadTexture("spritetest", "Resources/spritetest.png");
 
+	LoadTexture("Exit", "Resources/Exit.png");
+	LoadTexture("Start", "Resources/Start.png");
+	LoadTexture("UI1", "Resources/BuildMenu.png");
+	LoadTexture("Information", "Resources/Information.png");
+	LoadTexture("Political", "Resources/Political.png");
+
 	LoadFont("font", "Resources/testingFont.ttf");
 }
 

@@ -25,6 +25,9 @@
     <Filter Include="Tiles">
       <UniqueIdentifier>{3ccb8171-a982-4d0d-8ea9-df7dc727ade0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GUI">
+      <UniqueIdentifier>{4c665ef4-e470-4330-800a-832dcf6c7a82}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -50,6 +53,12 @@
     </ClInclude>
     <ClInclude Include="Buildings.h">
       <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>GUI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -79,6 +88,12 @@
     </ClCompile>
     <ClCompile Include="Buildings.cpp">
       <Filter>Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="UI.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>GUI</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
