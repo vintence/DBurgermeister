@@ -14,6 +14,11 @@ void ResourceManager::Init()
 	LoadTexture("eventCard", "Resources/Event.png");
 	LoadTexture("button", "Resources/button.png");
 	LoadTexture("resourceSheet", "Resources/TileSheet.png");
+	LoadTexture("Exit", "Resources/Exit.png");
+	LoadTexture("Start", "Resources/Start.png");
+	LoadTexture("UI1", "Resources/BuildMenu.png");
+	LoadTexture("Information", "Resources/Information.png");
+	LoadTexture("Political", "Resources/Political.png");
 
 	LoadFont("font", "Resources/testingFont.ttf");
 	LoadFont("titleFont", "Resources/Pride.otf");

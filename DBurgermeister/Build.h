@@ -16,7 +16,7 @@ public:
 	void Update(sf::RenderWindow &window);
 	void Draw(sf::RenderWindow &window);
 	sf::Sprite GetSpriteButton(int spriteID);
-
+	int GetWeaponCountPoint();
 
 private:
 
@@ -34,6 +34,7 @@ private:
 	sf::Sprite entertainButton;
 
 	int weaponCount = 0;
+	int weaponPoint = 0;
 	std::string weaponCountText;
 	sf::Text weaponText;
 	sf::Text weaponLabel;
