@@ -63,6 +63,9 @@ public:
 	void event10Option1();
 	void event10Option2();
 
+	void event11Option1();
+	void event11Option2();
+
 	void event12Option1();
 	void event12Option2();
 
@@ -71,6 +74,54 @@ public:
 
 	void event14Option1();
 	void event14Option2();
+
+	void event15Option1();
+	void event15Option2();
+
+	void event16Option1();
+	void event16Option2();
+
+	void event17Option1();
+	void event17Option2();
+
+	void event18Option1();
+	void event18Option2();
+
+	void event19Option1();
+	void event19Option2();
+
+	void event20Option1();
+	void event20Option2();
+
+	void event21Option1();
+	void event21Option2();
+
+	//void event22Option1();
+	//void event22Option2();
+
+	//void event23Option1();
+	//void event23Option2();
+
+	//void event24Option1();
+	//void event24Option2();
+
+	//void event25Option1();
+	//void event25Option2();
+
+	//void event26Option1();
+	//void event26Option2();
+
+	//void event27Option1();
+	//void event27Option2();
+
+	//void event28Option1();
+	//void event28Option2();
+
+	//void event29Option1();
+	//void event29Option2();
+
+	//void event30Option1();
+	//void event30Option2();
 
 };
 #endif

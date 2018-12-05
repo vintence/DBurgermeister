@@ -38,18 +38,19 @@ Build::Build()
 
 
 	};
-	weapon = ResourceManager::MakeSprite("spritesheet", 320, 0, 32, 32); //define sprite i classen gör att den inte åker tillbaka till origin efter triggered
-	consumer = ResourceManager::MakeSprite("spritesheet", 352, 0, 32, 32); //define sprite i classen gör att den inte åker tillbaka till origin efter triggered
-	house = ResourceManager::MakeSprite("spritesheet", 384, 0, 32, 32); //define sprite i classen gör att den inte åker tillbaka till origin efter triggered
-	road = ResourceManager::MakeSprite("spritesheet", 320, 32, 32, 32); //define sprite i classen gör att den inte åker tillbaka till origin efter triggered
-	entertain = ResourceManager::MakeSprite("spritesheet", 352, 32, 32, 32);
-	empty = ResourceManager::MakeSprite("spritesheet", 384, 32, 32, 32);
+	//weapon = ResourceManager::MakeSprite("spritesheet", 320, 0, 32, 32); //define sprite i classen gör att den inte åker tillbaka till origin efter triggered
+	//consumer = ResourceManager::MakeSprite("spritesheet", 352, 0, 32, 32); //define sprite i classen gör att den inte åker tillbaka till origin efter triggered
+	//house = ResourceManager::MakeSprite("spritesheet", 384, 0, 32, 32); //define sprite i classen gör att den inte åker tillbaka till origin efter triggered
+	//road = ResourceManager::MakeSprite("spritesheet", 320, 32, 32, 32); //define sprite i classen gör att den inte åker tillbaka till origin efter triggered
+	//entertain = ResourceManager::MakeSprite("spritesheet", 352, 32, 32, 32);
+	//empty = ResourceManager::MakeSprite("spritesheet", 384, 32, 32, 32);
 
-	weaponButton = ResourceManager::MakeSprite("spritesheet", 0, 0, 64, 64);
-	consumerButton = ResourceManager::MakeSprite("spritesheet", 64, 0, 64, 64);
-	houseButton = ResourceManager::MakeSprite("spritesheet", 128, 0, 64, 64);
-	roadButton = ResourceManager::MakeSprite("spritesheet", 192, 0, 64, 64);
-	entertainButton = ResourceManager::MakeSprite("spritesheet", 256, 0, 64, 64);
+	weaponButton = ResourceManager::MakeSprite("TileSheet", 0, 0, 128, 128);
+	consumerButton = ResourceManager::MakeSprite("TileSheet", 128, 0, 128, 128);
+	houseButton = ResourceManager::MakeSprite("TileSheet", 256, 0, 128, 128);
+	roadButton = ResourceManager::MakeSprite("TileSheet", 384, 0, 128, 128);
+	entertainButton = ResourceManager::MakeSprite("TileSheet", 512, 0, 128, 128);
+
 	weaponButton.setPosition(12, 12);
 	consumerButton.setPosition(12, 126);
 	houseButton.setPosition(12, 252);
@@ -62,7 +63,7 @@ Build::Build()
 
 	int tileCountWidth = (1600 - 128) / 32;
 	int y = 0;
-	for (int x = 0; x < tileCountWidth || y < 26; x++)
+	for (int x = 0; x < tileCountWidth || y < 25; x++)
 	{
 		if (x >= tileCountWidth)
 		{

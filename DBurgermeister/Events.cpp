@@ -43,9 +43,9 @@ void Events::Popup(sf::RenderWindow &window)
 	{
 		eventTitle = 3;
 	}
-	eventBackground = ResourceManager::MakeSprite("eventCard", 633, 0, 633, 480);
-	button1 = ResourceManager::MakeSprite("button", button1Frame, 0, 43, 43);
-	button2 = ResourceManager::MakeSprite("button", button2Frame, 0, 43, 43);
+	eventBackground = ResourceManager::MakeSprite("eventCard", 0, 0, 750, 550);
+	button1 = ResourceManager::MakeSprite("button", button1Frame, 0, 30, 30);
+	button2 = ResourceManager::MakeSprite("button", button2Frame, 0, 30, 30);
 	titleText.setFont(ResourceManager::GetFont("titleFont"));
 	text.setFont(ResourceManager::GetFont("textFont"));
 	optionText1.setFont(ResourceManager::GetFont("textFont"));
@@ -54,7 +54,7 @@ void Events::Popup(sf::RenderWindow &window)
 	//ALl the text stuff
 	sf::String eventTitleList[4]
 	{
-		"TERRORANSLCHAG!", "Das Folk rapport", "Message from Hotlir", "Das Wetter"
+		"TERRORANSLCHAG!", "Das Folk rapport", "Note from Hotlir", "Das Wetter"
 	};
 
 	sf::String eventFlavor[21]
@@ -159,7 +159,7 @@ void Events::Popup(sf::RenderWindow &window)
 
 	//TITLE TEXT TITLE TEXT THANOS TEXT
 	titleText.setString(eventTitleList[eventTitle]);
-	titleText.setCharacterSize(100);
+	titleText.setCharacterSize(90);
 	titleText.setFillColor(sf::Color::Black);
 
 	//OTHER TEXT LIKE DESCRIPTIONS
@@ -178,12 +178,12 @@ void Events::Popup(sf::RenderWindow &window)
 
 	//sets the positions
 	eventBackground.setPosition(500, 100);
-	button1.setPosition(sf::Vector2f(eventBackground.getPosition().x + 50, 460.f));
-	button2.setPosition(sf::Vector2f(eventBackground.getPosition().x + 350, 460.f));
-	titleText.setPosition(eventBackground.getPosition().x + 50, 130);
-	text.setPosition(eventBackground.getPosition().x + 45, 250);
-	optionText1.setPosition(eventBackground.getPosition().x + 95, 440);
-	optionText2.setPosition(eventBackground.getPosition().x + 400, 440);
+	button1.setPosition(sf::Vector2f(eventBackground.getPosition().x + 80, 420.f));
+	button2.setPosition(sf::Vector2f(eventBackground.getPosition().x + 80, 510.f));
+	titleText.setPosition(eventBackground.getPosition().x + 85, 110);
+	text.setPosition(eventBackground.getPosition().x + 55, 250);
+	optionText1.setPosition(eventBackground.getPosition().x + 115, 410);
+	optionText2.setPosition(eventBackground.getPosition().x + 115, 500);
 
 	//draws the card 
 	if (show)
@@ -252,23 +252,21 @@ void Events::Popup(sf::RenderWindow &window)
 	//small graphic for hovering over a button
 	if (InputManager::isSpriteCollided(button1, sf::Mouse::Button::Right, window))
 	{
-		button1Frame = 86;
+		button1Frame = 30;
 		//std::cout << InputManager::getMousePosition(window).x << ", " << InputManager::getMousePosition(window).y <<std::endl ;
 	}
-	else button1Frame = 43;
+	else button1Frame = 0;
 	if (InputManager::isSpriteCollided(button2, sf::Mouse::Button::Right, window))
 	{
-		button2Frame = 86;
+		button2Frame = 30;
 		//std::cout << InputManager::getMousePosition(window).x << ", " << InputManager::getMousePosition(window).y << std::endl;
 	}
-	else button2Frame = 43;
+	else button2Frame = 0;
 
 	//let the player make a choice via click
 	//text manager
 	//sound
-	//random event
-	//event closes
-
+	//random event	//event closes
 
 }
 void Events::event1Option1()
@@ -282,7 +280,6 @@ void Events::event1Option2()
 	show = false;
 }
 
-
 void Events::event2Option1()
 {
 	std::cout << "Event number 2 option 1 \n";
@@ -293,7 +290,6 @@ void Events::event2Option2()
 	std::cout << "hello boi This is number \n";
 	show = false;
 }
-
 
 void Events::event3Option1()
 {
@@ -306,7 +302,6 @@ void Events::event3Option2()
 	show = false;
 }
 
-
 void Events::event4Option1()
 {
 	std::cout << "Event number 4 option 1";
@@ -317,7 +312,6 @@ void Events::event4Option2()
 	std::cout << "hello boi This is number";
 	show = false;
 }
-
 
 void Events::event5Option1()
 {
@@ -330,8 +324,6 @@ void Events::event5Option2()
 	show = false;
 }
 
-
-
 void Events::event6Option1()
 {
 	std::cout << "Event number 4 option 1";
@@ -342,8 +334,6 @@ void Events::event6Option2()
 	std::cout << "hello boi This is number";
 	show = false;
 }
-
-
 
 void Events::event7Option1()
 {
@@ -356,8 +346,6 @@ void Events::event7Option2()
 	show = false;
 }
 
-
-
 void Events::event8Option1()
 {
 	std::cout << "Event number 4 option 1";
@@ -368,8 +356,6 @@ void Events::event8Option2()
 	std::cout << "hello boi This is number";
 	show = false;
 }
-
-
 
 void Events::event9Option1()
 {
@@ -382,14 +368,133 @@ void Events::event9Option2()
 	show = false;
 }
 
-
-
 void Events::event10Option1()
 {
 	std::cout << "Event number 4 option 1";
 	show = false;
 }
 void Events::event10Option2()
+{
+	std::cout << "hello boi This is number";
+	show = false;
+}
+
+void Events::event11Option1()
+{
+	std::cout << "Event number 1 option 1 \n";
+	show = false;
+}
+void Events::event11Option2()
+{
+	std::cout << "hello bo2i This is number";
+	show = false;
+}
+
+void Events::event12Option1()
+{
+	std::cout << "Event number 2 option 1 \n";
+	show = false;
+}
+void Events::event12Option2()
+{
+	std::cout << "hello boi This is number \n";
+	show = false;
+}
+
+void Events::event13Option1()
+{
+	std::cout << "Event number 3 option 1 \n";
+	show = false;
+}
+void Events::event13Option2()
+{
+	std::cout << "hello boi This is number";
+	show = false;
+}
+
+void Events::event14Option1()
+{
+	std::cout << "Event number 4 option 1";
+	show = false;
+}
+void Events::event14Option2()
+{
+	std::cout << "hello boi This is number";
+	show = false;
+}
+
+void Events::event15Option1()
+{
+	std::cout << "Event number 4 option 1";
+	show = false;
+}
+void Events::event15Option2()
+{
+	std::cout << "hello boi This is number";
+	show = false;
+}
+
+void Events::event16Option1()
+{
+	std::cout << "Event number 4 option 1";
+	show = false;
+}
+void Events::event16Option2()
+{
+	std::cout << "hello boi This is number";
+	show = false;
+}
+
+void Events::event17Option1()
+{
+	std::cout << "Event number 4 option 1";
+	show = false;
+}
+void Events::event17Option2()
+{
+	std::cout << "hello boi This is number";
+	show = false;
+}
+
+void Events::event18Option1()
+{
+	std::cout << "Event number 4 option 1";
+	show = false;
+}
+void Events::event18Option2()
+{
+	std::cout << "hello boi This is number";
+	show = false;
+}
+
+void Events::event19Option1()
+{
+	std::cout << "Event number 4 option 1";
+	show = false;
+}
+void Events::event19Option2()
+{
+	std::cout << "hello boi This is number";
+	show = false;
+}
+
+void Events::event20Option1()
+{
+	std::cout << "Event number 4 option 1";
+	show = false;
+}
+void Events::event20Option2()
+{
+	std::cout << "hello boi This is number";
+	show = false;
+}
+
+void Events::event21Option1()
+{
+	std::cout << "Event number 4 option 1";
+	show = false;
+}
+void Events::event21Option2()
 {
 	std::cout << "hello boi This is number";
 	show = false;
