@@ -246,8 +246,11 @@ void Build::Update(sf::RenderWindow &window)
 					timer = clickDelay;
 					//myTiles.push_back(Tile(road, sf::Vector2f(myTiles[i].GetPosition().x, myTiles[i].GetPosition().y), Road)); //skapa en ny lager av tile på den ställe
 					myTiles[i] = Tile(weapon, sf::Vector2f(myTiles[i].GetPosition().x, myTiles[i].GetPosition().y), Weapon);
+
 					weaponCount += 1;
-					weaponCountText = std::to_string( weaponCount * myTiles[i].GetWeaponPoint());
+					weaponPoint = weaponCount * myTiles[i].GetWeaponPoint();
+					weaponCountText = std::to_string(weaponPoint);
+
 					std::cout << weaponCount << std::endl;
 					std::cout << myTiles[i].GetPosition().x << myTiles[i].GetPosition().y << std::endl;
 				}
@@ -330,6 +333,10 @@ void Build::Update(sf::RenderWindow &window)
 
 		timer--;
 	}
+}
+int Build::GetWeaponCountPoint()
+{
+	return weaponPoint;
 }
 
 Build::~Build()

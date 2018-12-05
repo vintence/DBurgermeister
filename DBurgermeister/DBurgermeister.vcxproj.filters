@@ -25,6 +25,9 @@
     <Filter Include="Controls">
       <UniqueIdentifier>{183f1a1e-7572-4c85-b8c0-e925fd494580}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GUI">
+      <UniqueIdentifier>{29f6c31f-7c11-4f2e-9327-19fb8a8771f1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -50,6 +53,12 @@
     </ClInclude>
     <ClInclude Include="Events.h">
       <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.h">
+      <Filter>GUI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -79,6 +88,12 @@
     </ClCompile>
     <ClCompile Include="Events.cpp">
       <Filter>Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI.cpp">
+      <Filter>GUI</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
