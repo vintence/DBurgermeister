@@ -10,7 +10,6 @@ std::map<std::string, sf::Font> ResourceManager::_fonts;
 void ResourceManager::Init()
 {
 	LoadTexture("cursor", "Resources/kien.png");
-	LoadTexture("spritesheet", "Resources/spritesheetTest.png");
 	LoadTexture("eventCard", "Resources/Event.png");
 	LoadTexture("button", "Resources/button.png");
 	LoadTexture("resourceSheet", "Resources/TileSheet.png");
@@ -19,6 +18,7 @@ void ResourceManager::Init()
 	LoadTexture("UI1", "Resources/BuildMenu.png");
 	LoadTexture("Information", "Resources/Information.png");
 	LoadTexture("Political", "Resources/Political.png");
+	LoadTexture("weaponIcon","Resources/weaponIcon.png");
 
 	LoadFont("font", "Resources/testingFont.ttf");
 	LoadFont("titleFont", "Resources/Pride.otf");

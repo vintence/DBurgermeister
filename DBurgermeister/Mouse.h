@@ -2,11 +2,13 @@
 #define MOUSE_HEADER
 #include <SFML/Graphics.hpp>
 #include "Build.h"
+#include "UI.h"
 
 
 class Mouse
 {
-	Build build;
+UI ui;
+Build build;
 public:
 	
 

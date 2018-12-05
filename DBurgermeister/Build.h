@@ -3,10 +3,12 @@
 #include <SFML/Graphics.hpp>
 #include "Tile.h"
 #include <vector>
+#include "UI.h"
 
 
 class Build
 {
+UI ui;
 public:
 	Build();
 	~Build();
@@ -15,7 +17,7 @@ public:
 
 	void Update(sf::RenderWindow &window);
 	void Draw(sf::RenderWindow &window);
-	sf::Sprite GetSpriteButton(int spriteID);
+	//sf::Sprite GetSpriteButton(int spriteID);
 	int GetWeaponCountPoint();
 
 private:
@@ -26,12 +28,6 @@ private:
 	sf::Sprite road;
 	sf::Sprite entertain;
 	sf::Sprite empty;
-
-	sf::Sprite weaponButton;
-	sf::Sprite consumerButton;
-	sf::Sprite houseButton;
-	sf::Sprite roadButton;
-	sf::Sprite entertainButton;
 
 	int weaponCount = 0;
 	int weaponPoint = 0;
@@ -51,7 +47,6 @@ private:
 	int timer;
 	int clickDelay;
 	sf::Vector2f tileScale;
-	sf::Vector2f buttonScale;
 
 	std::vector<Tile> myTiles;
 };
