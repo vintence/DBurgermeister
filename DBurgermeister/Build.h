@@ -4,10 +4,12 @@
 #include "Tile.h"
 #include <vector>
 #include "UI.h"
+#include "Stats.h"
 
 
 class Build
 {
+	Stats stats;
 UI ui;
 public:
 	Build();

@@ -4,7 +4,6 @@
 #include "InputManager.h"
 #include <iostream> 
 
-
 Build::Build()
 {
 	int map[] =
@@ -198,8 +197,12 @@ void Build::Update(sf::RenderWindow &window)
 					weaponPoint = weaponCount * myTiles[i].GetMoneyCost();
 					weaponCountText = std::to_string(weaponPoint);
 
-					std::cout << weaponCount << std::endl;
-					std::cout << myTiles[i].GetPosition().x << myTiles[i].GetPosition().y << std::endl;
+					stats.SetHappiness((float)weaponPoint);
+
+					std::cout << stats.GetHappiness();
+
+					//std::cout << weaponCount << std::endl;
+					//std::cout << myTiles[i].GetPosition().x << myTiles[i].GetPosition().y << std::endl;
 				}
 				break;
 			}
