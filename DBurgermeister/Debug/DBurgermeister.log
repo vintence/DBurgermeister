@@ -1,7 +1,1 @@
-﻿  DBurgermeister.cpp
-c:\users\trungkin.le\documents\visual studio 2017\projects\dburgermeister\dburgermeister\dburgermeister.cpp(25): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-  DBurgermeister.vcxproj -> C:\Users\trungkin.le\Documents\Visual Studio 2017\Projects\DBurgermeister\Debug\DBurgermeister.exe
+﻿  DBurgermeister.vcxproj -> C:\Users\trungkin.le\Documents\Visual Studio 2017\Projects\DBurgermeister\Debug\DBurgermeister.exe

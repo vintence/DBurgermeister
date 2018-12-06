@@ -195,7 +195,7 @@ void Build::Update(sf::RenderWindow &window)
 					myTiles[i] = Tile(weapon, sf::Vector2f(myTiles[i].GetPosition().x, myTiles[i].GetPosition().y), Weapon);
 
 					weaponCount += 1;
-					weaponPoint = weaponCount * myTiles[i].GetWeaponPoint();
+					weaponPoint = weaponCount * myTiles[i].GetMoneyCost();
 					weaponCountText = std::to_string(weaponPoint);
 
 					std::cout << weaponCount << std::endl;

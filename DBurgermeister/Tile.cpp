@@ -18,31 +18,51 @@ Tile::Tile(const sf::Sprite &sprite, const sf::Vector2f &position, const TileTyp
 	{
 	case Weapon:
 	{
-		weaponPoint = 10;
-		population = -10;
-		moneyPoint = 10;
-		cost = 150;
+		generateWeapon = 10;
+		generateMoney = 0;
+		populationCost = 10;
+		generatePopulation = 0;
+		moneyCost = 100;
 		break;
 	}
 	case House:
 	{
-		weaponPoint = 0;
-		population = 5;
-		moneyPoint = 0;
-		cost = 50;
+		generateWeapon = 0;
+		generateMoney = 0;
+		populationCost = 0;
+		generatePopulation = 5;
+		moneyCost = 50;
+		generateHappiness = 0;
 		break;
 	}
 	case Consumer:
 	{
-		weaponPoint = 0;
-		population = -5;
-		moneyPoint = 50;
-		cost = 150;
+		generateWeapon = 0;
+		generateMoney = 50;
+		populationCost = 5;
+		generatePopulation = 0;
+		moneyCost = 150;
+		generateHappiness = 0;
+		break;
+	}
+	case Entertain:
+	{
+		generateWeapon = 0;
+		generateMoney = 25;
+		populationCost = 5;
+		generatePopulation = 0;
+		moneyCost = 100;
+		generateHappiness = 0.5;
 		break;
 	}
 	case Road:
 	{
-		cost = 10;
+		generateWeapon = 0;
+		generateMoney = 0;
+		populationCost = 0;
+		generatePopulation = 0;
+		moneyCost = 10;
+		generateHappiness = 0;
 		break;
 	}
 	}
@@ -50,23 +70,6 @@ Tile::Tile(const sf::Sprite &sprite, const sf::Vector2f &position, const TileTyp
 Tile::~Tile()
 {
 
-}
-
-const int & Tile::GetCost()
-{
-	return cost;
-}
-const int & Tile::GetWeaponPoint()
-{
-	return weaponPoint;
-}
-const int & Tile::GetPopulation()
-{
-	return population;
-}
-const int & Tile::GetMoneyPoint()
-{
-	return moneyPoint;
 }
 
 const sf::Sprite & Tile::GetSprite()
@@ -82,4 +85,34 @@ const sf::Vector2f & Tile::GetPosition()
 const TileType & Tile::GetType()
 {
 	return myType;
+}
+
+const float & Tile::GetGenerateMoney()
+{
+	return generateMoney;
+}
+
+const float & Tile::GetGenerateWeapon()
+{
+	return generateWeapon;
+}
+
+const float & Tile::GetPopulationCost()
+{
+	return populationCost;
+}
+
+const float & Tile::GetGeneratePopulation()
+{
+	return generatePopulation;
+}
+
+const float & Tile::GetMoneyCost()
+{
+	return moneyCost;
+}
+
+const float & Tile::GetGenerateHappiness()
+{
+	return generateHappiness;
 }

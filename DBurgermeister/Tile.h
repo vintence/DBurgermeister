@@ -23,20 +23,25 @@ public:
 	const sf::Sprite &GetSprite();
 	const sf::Vector2f &GetPosition();
 	const TileType &GetType();
-	const int &GetCost();
-	const int &GetWeaponPoint();
-	const int &GetPopulation();
-	const int &GetMoneyPoint();
+
+	const float &GetGenerateMoney();
+	const float &GetGenerateWeapon();
+	const float &GetPopulationCost();
+	const float &GetGeneratePopulation();
+	const float &GetMoneyCost();
+	const float &GetGenerateHappiness();
 
 private:
 	sf::Sprite mySprite;
 	sf::Vector2f myPosition;
 	TileType myType;
 
-	int weaponPoint;
-	int population;
-	int moneyPoint;
-	int cost;
+	float generateMoney;
+	float generateWeapon;
+	float populationCost;
+	float generatePopulation;
+	float moneyCost;
+	float generateHappiness;
 };
 
 #endif
