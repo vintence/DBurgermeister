@@ -14,21 +14,24 @@ Mouse::Mouse()
 	iconMiddle = sf::Vector2f(32/2, 32/2);
 	iconScale = sf::Vector2f(0.25f, 0.25f);
 	iconOrigin = sf::Vector2f(-(128*iconScale.x), -(128*iconScale.y));
-	weaponIcon = ui.GetSpriteButton(0);
+	weaponIcon = ui.GetSprite(WeaponButton);
 	weaponIcon.scale(iconScale);
 	weaponIcon.setPosition(iconOrigin);
-	consumerIcon = ui.GetSpriteButton(1);
+	consumerIcon = ui.GetSprite(ConsumerButton);
 	consumerIcon.scale(iconScale);
 	consumerIcon.setPosition(iconOrigin);
-	houseIcon = ui.GetSpriteButton(2);
+	houseIcon = ui.GetSprite(HouseButton);
 	houseIcon.scale(iconScale);
 	houseIcon.setPosition(iconOrigin);
-	roadIcon = ui.GetSpriteButton(3);
+	roadIcon = ui.GetSprite(RoadButton);
 	roadIcon.scale(iconScale);
 	roadIcon.setPosition(iconOrigin);
-	entertainIcon = ui.GetSpriteButton(4);
+	entertainIcon = ui.GetSprite(EntertainButton);
 	entertainIcon.scale(iconScale);
 	entertainIcon.setPosition(iconOrigin);
+	destroyIcon = ui.GetSprite(DestroyButton);
+	destroyIcon.scale(iconScale);
+	destroyIcon.setPosition(iconOrigin);
 
 }
 
@@ -39,7 +42,9 @@ void Mouse::Draw(sf::RenderWindow &window)
 	window.draw(houseIcon);
 	window.draw(roadIcon);
 	window.draw(entertainIcon);
+	window.draw(destroyIcon);
 	window.draw(cursor);
+	
 
 }
 void Mouse::Update(sf::RenderWindow &window)
@@ -64,17 +69,52 @@ void Mouse::Update(sf::RenderWindow &window)
 	//mouse + mouse click animation
 	
 	//click icon code
-	for (int i = 0; i < 5; i++)
+	for (int i = 0; i < 6; i++)
 	{
-		if (InputManager::isSpriteClicked(ui.GetSpriteButton(i), sf::Mouse::Button::Left, window))
+		Type type; //enum Type ligger i UI.h
+		switch (i)
+		{
+			case 0:
+			{
+				type = WeaponButton;
+				break;
+			}
+			case 1:
+			{
+				type = ConsumerButton;
+				break;
+			}
+			case 2:
+			{
+				type = HouseButton;
+				break;
+			}
+			case 3:
+			{
+				type = RoadButton;
+				break;
+			}
+			case 4:
+			{
+				type = EntertainButton;
+				break;
+			}
+			case 5:
+			{
+				type = DestroyButton;
+				break;
+			}
+		}
+
+		if (InputManager::isSpriteClicked(ui.GetSprite(type), sf::Mouse::Button::Left, window))
 		{
 			isBuildingSelected = i;
 		}
-		if (isBuildingSelected != 5)
+		if (isBuildingSelected != 6)
 		{
 			if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Right))
 			{
-				isBuildingSelected = 5;
+				isBuildingSelected = 6;
 				std::cout << "asddddddddd";
 			}
 		}
@@ -88,6 +128,7 @@ void Mouse::Update(sf::RenderWindow &window)
 		houseIcon.setPosition(iconOrigin);
 		roadIcon.setPosition(iconOrigin);
 		entertainIcon.setPosition(iconOrigin);
+		destroyIcon.setPosition(iconOrigin);
 		break;
 	}
 	case 0:
@@ -97,6 +138,7 @@ void Mouse::Update(sf::RenderWindow &window)
 		houseIcon.setPosition(iconOrigin);
 		roadIcon.setPosition(iconOrigin);
 		entertainIcon.setPosition(iconOrigin);
+		destroyIcon.setPosition(iconOrigin);
 		break;
 	}
 	case 1:
@@ -115,6 +157,7 @@ void Mouse::Update(sf::RenderWindow &window)
 		consumerIcon.setPosition(iconOrigin);
 		roadIcon.setPosition(iconOrigin);
 		entertainIcon.setPosition(iconOrigin);
+		destroyIcon.setPosition(iconOrigin);
 		break;
 	}
 	case 3:
@@ -124,6 +167,7 @@ void Mouse::Update(sf::RenderWindow &window)
 		consumerIcon.setPosition(iconOrigin);
 		houseIcon.setPosition(iconOrigin);
 		entertainIcon.setPosition(iconOrigin);
+		destroyIcon.setPosition(iconOrigin);
 		break;
 	}
 	case 4:
@@ -133,6 +177,17 @@ void Mouse::Update(sf::RenderWindow &window)
 		weaponIcon.setPosition(iconOrigin);
 		consumerIcon.setPosition(iconOrigin);
 		houseIcon.setPosition(iconOrigin);
+		destroyIcon.setPosition(iconOrigin);
+		break;
+	}
+	case 5:
+	{
+		destroyIcon.setPosition(sf::Vector2f(InputManager::getMousePosition(window).x - iconMiddle.x, InputManager::getMousePosition(window).y - iconMiddle.y));
+		roadIcon.setPosition(iconOrigin);
+		weaponIcon.setPosition(iconOrigin);
+		consumerIcon.setPosition(iconOrigin);
+		houseIcon.setPosition(iconOrigin);
+		entertainIcon.setPosition(iconOrigin);
 		break;
 	}
 	}

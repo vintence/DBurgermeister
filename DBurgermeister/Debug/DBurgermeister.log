@@ -1,16 +1,2 @@
-﻿  Build.cpp
-c:\users\trungkin.le\documents\visual studio 2017\projects\dburgermeister\dburgermeister\build.cpp(133): warning C4018: '<': signed/unsigned mismatch
-c:\users\trungkin.le\documents\visual studio 2017\projects\dburgermeister\dburgermeister\build.cpp(148): warning C4018: '<': signed/unsigned mismatch
-c:\users\trungkin.le\documents\visual studio 2017\projects\dburgermeister\dburgermeister\build.cpp(197): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-  DBurgermeister.cpp
-c:\users\trungkin.le\documents\visual studio 2017\projects\dburgermeister\dburgermeister\dburgermeister.cpp(27): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-  Mouse.cpp
-c:\users\trungkin.le\documents\visual studio 2017\projects\dburgermeister\dburgermeister\mouse.cpp(50): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  Stats.cpp
-  Tile.cpp
-  Generating Code...
+﻿  App.cpp
   DBurgermeister.vcxproj -> C:\Users\trungkin.le\Documents\Visual Studio 2017\Projects\DBurgermeister\Debug\DBurgermeister.exe

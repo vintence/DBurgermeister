@@ -17,6 +17,12 @@ void ResourceManager::Init()
 	LoadTexture("Information", "Resources/Information.png");
 	LoadTexture("Political", "Resources/Political.png");
 	LoadTexture("weaponIcon","Resources/weaponIcon.png");
+	LoadTexture("destroyIcon", "Resources/destroyIcon.png");
+	LoadTexture("entertainmentIcon", "Resources/entertainmentIcon.png");
+	LoadTexture("consumerIcon", "Resources/consumerIcon.png");
+	LoadTexture("roadIcon", "Resources/roadIcon.png");
+	LoadTexture("endTurnButton", "Resources/endTurnButton.png");
+	LoadTexture("buildModeButton", "Resources/buildModeButton.png");
 	LoadTexture("eventCard", "Resources/EventPopUp.png");
 	LoadTexture("button", "Resources/CheckBox.png");
 

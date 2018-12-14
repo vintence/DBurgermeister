@@ -157,6 +157,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="App.h" />
     <ClInclude Include="Build.h" />
     <ClInclude Include="Events.h" />
     <ClInclude Include="InputManager.h" />
@@ -170,6 +171,7 @@
     <ClInclude Include="UI.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="App.cpp" />
     <ClCompile Include="Build.cpp" />
     <ClCompile Include="DBurgermeister.cpp" />
     <ClCompile Include="Events.cpp" />

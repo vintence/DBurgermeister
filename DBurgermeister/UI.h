@@ -3,6 +3,16 @@
 #include <SFML/Graphics.hpp>
 
 
+enum Type
+{
+	WeaponButton,
+	ConsumerButton,
+	HouseButton,
+	RoadButton,
+	EntertainButton,
+	DestroyButton
+};
+
 class UI
 {
 public:
@@ -10,13 +20,14 @@ public:
 	~UI();
 	void Update(sf::RenderWindow &window);
 	void Draw(sf::RenderWindow &window);
-	sf::Sprite GetSpriteButton(int spriteID);
+
+	sf::Sprite GetSprite(Type spriteType);
 
 private:
 	sf::Sprite UI1;
 	sf::Sprite Information;
-	sf::Sprite Political;
-	sf::Sprite Political2;
+	sf::Sprite switchModeButton;
+	sf::Sprite endTurnButton;
 	sf::Sprite Exit;
 
 	sf::Sprite weaponButton;
@@ -24,6 +35,7 @@ private:
 	sf::Sprite houseButton;
 	sf::Sprite roadButton;
 	sf::Sprite entertainButton;
+	sf::Sprite destroyButton;
 	sf::Vector2f buttonScale;
 };
 
