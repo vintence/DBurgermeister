@@ -4,11 +4,11 @@
 #include "Tile.h"
 #include <vector>
 #include "UI.h"
+#include "Stats.h"
 
 
 class Build
 {
-UI ui;
 public:
 	Build();
 	~Build();
@@ -21,6 +21,8 @@ public:
 	int GetWeaponCountPoint();
 
 private:
+	Stats stats;
+	UI ui;
 
 	sf::Sprite weapon;
 	sf::Sprite consumer;
@@ -39,7 +41,7 @@ private:
 	sf::Text populationText;
 	sf::Text populationLabel;
 
-	int buildChoice = 5;
+	int buildChoice = 6;
 
 
 	//sf::Sprite tile;

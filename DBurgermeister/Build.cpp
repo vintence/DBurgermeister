@@ -4,7 +4,6 @@
 #include "InputManager.h"
 #include <iostream> 
 
-
 Build::Build()
 {
 	int map[] =
@@ -148,39 +147,45 @@ void Build::Update(sf::RenderWindow &window)
 	//om man clicka på en byggnad händer 
 	for (int i = 0; i < myTiles.size(); i++) //for loopen går genom alla tile på mappen.
 	{
-		if (InputManager::isSpriteClicked(ui.GetSpriteButton(0), sf::Mouse::Button::Left, window) && timer <= 0 && buildChoice != 0)
+		if (InputManager::isSpriteClicked(ui.GetSprite(WeaponButton), sf::Mouse::Button::Left, window) && timer <= 0 && buildChoice != 0)
 		{
 			buildChoice = 0;
 			timer = clickDelay;
 			std::cout << "choice 0\n";
 		}
-		else if (InputManager::isSpriteClicked(ui.GetSpriteButton(1), sf::Mouse::Button::Left, window) && timer <= 0 && buildChoice != 1)
+		else if (InputManager::isSpriteClicked(ui.GetSprite(ConsumerButton), sf::Mouse::Button::Left, window) && timer <= 0 && buildChoice != 1)
 		{
 			buildChoice = 1;
 			timer = clickDelay;
 			std::cout << "choice 1\n";
 		}
-		else if (InputManager::isSpriteClicked(ui.GetSpriteButton(2), sf::Mouse::Button::Left, window) && timer <= 0 && buildChoice != 2)
+		else if (InputManager::isSpriteClicked(ui.GetSprite(HouseButton), sf::Mouse::Button::Left, window) && timer <= 0 && buildChoice != 2)
 		{
 			buildChoice = 2;
 			timer = clickDelay;
 			std::cout << "choice 2\n";
 		}
-		else if (InputManager::isSpriteClicked(ui.GetSpriteButton(3), sf::Mouse::Button::Left, window) && timer <= 0 && buildChoice != 3)
+		else if (InputManager::isSpriteClicked(ui.GetSprite(RoadButton), sf::Mouse::Button::Left, window) && timer <= 0 && buildChoice != 3)
 		{
 			buildChoice = 3;
 			timer = clickDelay;
 			std::cout << "choice 3\n";
 		}
-		else if (InputManager::isSpriteClicked(ui.GetSpriteButton(4), sf::Mouse::Button::Left, window) && timer <= 0 && buildChoice != 4)
+		else if (InputManager::isSpriteClicked(ui.GetSprite(EntertainButton), sf::Mouse::Button::Left, window) && timer <= 0 && buildChoice != 4)
 		{
 			buildChoice = 4;
 			timer = clickDelay;
 			std::cout << "choice 3\n";
 		}
-		else if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Right) && timer <= 0 && buildChoice != 5)
+		else if (InputManager::isSpriteClicked(ui.GetSprite(DestroyButton), sf::Mouse::Button::Left, window) && timer <= 0 && buildChoice != 5)
 		{
 			buildChoice = 5;
+			timer = clickDelay;
+			std::cout << "choice 5\n";
+		}
+		else if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Right) && timer <= 0 && buildChoice != 6)
+		{
+			buildChoice = 6;
 			timer = clickDelay;
 			std::cout << "choice 5\n";
 		}
@@ -195,11 +200,15 @@ void Build::Update(sf::RenderWindow &window)
 					myTiles[i] = Tile(weapon, sf::Vector2f(myTiles[i].GetPosition().x, myTiles[i].GetPosition().y), Weapon);
 
 					weaponCount += 1;
-					weaponPoint = weaponCount * myTiles[i].GetWeaponPoint();
+					weaponPoint = weaponCount * myTiles[i].GetMoneyCost();
 					weaponCountText = std::to_string(weaponPoint);
 
-					std::cout << weaponCount << std::endl;
-					std::cout << myTiles[i].GetPosition().x << myTiles[i].GetPosition().y << std::endl;
+					//stats.SetHappiness((float)weaponPoint);4
+
+					//std::cout << stats.GetHappiness();
+
+					//std::cout << weaponCount << std::endl;
+					//std::cout << myTiles[i].GetPosition().x << myTiles[i].GetPosition().y << std::endl;
 				}
 				break;
 			}
@@ -243,6 +252,17 @@ void Build::Update(sf::RenderWindow &window)
 					timer = clickDelay;
 					//myTiles.push_back(Tile(house, sf::Vector2f(myTiles[i].GetPosition().x, myTiles[i].GetPosition().y), House)); //skapa en ny lager av tile på den ställe
 					myTiles[i] = Tile(entertain, sf::Vector2f(myTiles[i].GetPosition().x, myTiles[i].GetPosition().y), Entertain);
+					std::cout << myTiles[i].GetPosition().x << myTiles[i].GetPosition().y << std::endl;
+				}
+				break;
+			}
+			case 5:
+			{
+				if (InputManager::isSpriteClicked(myTiles[i].GetSprite(), sf::Mouse::Button::Left, window) && timer <= 0 && myTiles[i].GetType() != Empty)
+				{
+					timer = clickDelay;
+					//myTiles.push_back(Tile(house, sf::Vector2f(myTiles[i].GetPosition().x, myTiles[i].GetPosition().y), House)); //skapa en ny lager av tile på den ställe
+					myTiles[i] = Tile(empty, sf::Vector2f(myTiles[i].GetPosition().x, myTiles[i].GetPosition().y), Empty);
 					std::cout << myTiles[i].GetPosition().x << myTiles[i].GetPosition().y << std::endl;
 				}
 				break;

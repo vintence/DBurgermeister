@@ -26,13 +26,14 @@ private:
 	sf::Sprite houseIcon;
 	sf::Sprite roadIcon;
 	sf::Sprite entertainIcon;
+	sf::Sprite destroyIcon;
 	sf::Vector2f iconScale;
 	sf::Vector2f iconMiddle;
 	sf::Vector2f iconOrigin;
 
 	sf::Vector2f mousePosWindow;
 	int spriteOrigin;
-	int isBuildingSelected = 5;
+	int isBuildingSelected = 6;
 };
 
 #endif

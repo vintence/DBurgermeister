@@ -60,6 +60,12 @@
     <ClInclude Include="UI.h">
       <Filter>GUI</Filter>
     </ClInclude>
+    <ClInclude Include="Stats.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="App.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -94,6 +100,12 @@
     </ClCompile>
     <ClCompile Include="UI.cpp">
       <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Stats.cpp">
+      <Filter>Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="App.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

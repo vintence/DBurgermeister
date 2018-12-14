@@ -157,6 +157,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="App.h" />
     <ClInclude Include="Build.h" />
     <ClInclude Include="Events.h" />
     <ClInclude Include="InputManager.h" />
@@ -165,10 +166,12 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="Political.h" />
     <ClInclude Include="ResourceManager.h" />
+    <ClInclude Include="Stats.h" />
     <ClInclude Include="Tile.h" />
     <ClInclude Include="UI.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="App.cpp" />
     <ClCompile Include="Build.cpp" />
     <ClCompile Include="DBurgermeister.cpp" />
     <ClCompile Include="Events.cpp" />
@@ -183,6 +186,7 @@
     </ClCompile>
     <ClCompile Include="Political.cpp" />
     <ClCompile Include="ResourceManager.cpp" />
+    <ClCompile Include="Stats.cpp" />
     <ClCompile Include="Tile.cpp" />
     <ClCompile Include="UI.cpp" />
   </ItemGroup>
