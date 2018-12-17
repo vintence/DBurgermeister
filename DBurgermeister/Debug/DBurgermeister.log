@@ -1,2 +1,7 @@
-﻿  App.cpp
+﻿  ResourceManager.cpp
+  UI.cpp
+  Generating Code...
+c:\users\trungkin.le\documents\visual studio 2017\projects\dburgermeister\dburgermeister\ui.cpp(137): warning C4715: 'UI::GetSprite': not all control paths return a value
+c:\users\trungkin.le\documents\visual studio 2017\projects\dburgermeister\dburgermeister\resourcemanager.cpp(54): warning C4172: returning address of local variable or temporary: tempSprite
+  LINK : C:\Users\trungkin.le\Documents\Visual Studio 2017\Projects\DBurgermeister\Debug\DBurgermeister.exe not found or not built by the last incremental link; performing full link
   DBurgermeister.vcxproj -> C:\Users\trungkin.le\Documents\Visual Studio 2017\Projects\DBurgermeister\Debug\DBurgermeister.exe

@@ -6,15 +6,23 @@
 
 UI::UI()
 {
-	UI1 = ResourceManager::MakeSprite("UI1", 0, 0, 128, 832);
-	Information = ResourceManager::MakeSprite("Information", 0, 0, 1344, 128);
+	leftPanel = ResourceManager::MakeSprite("UI1", 0, 0, 128, 832);
+	information = ResourceManager::MakeSprite("Information", 0, 0, 1344, 128);
 	switchModeButton = ResourceManager::MakeSprite("buildModeButton", 0, 0, 128, 128);
 	endTurnButton = ResourceManager::MakeSprite("endTurnButton", 0, 0, 128, 128);
-	Exit = ResourceManager::MakeSprite("Exit", 0, 0, 128, 32);
-	Exit.setPosition(1472.f, 0.f);
+	exit = ResourceManager::MakeSprite("Exit", 0, 0, 128, 32);
+	exit.setPosition(1472.f, 0.f);
 	switchModeButton.setPosition(0.f, 832.f);
 	endTurnButton.setPosition(1472.f, 832);
-	Information.setPosition(128.f, 832.f);
+	information.setPosition(128.f, 832.f);
+
+	menuBackground = ResourceManager::MakeSprite("backgroundPicture", 0, 0, 1600, 960);
+	menuStart = ResourceManager::MakeSprite("menuStart", 0, 0, 400, 200);
+	menuOption = ResourceManager::MakeSprite("menuOption", 0, 0, 400, 200);
+	menuExit = ResourceManager::MakeSprite("menuExit", 0, 0, 400, 200);
+	menuStart.setPosition(600, 100);
+	menuOption.setPosition(600, 350);
+	menuExit.setPosition(600, 600);
 
 	//button
 	buttonScale = sf::Vector2f(0.5f, 0.5f);
@@ -34,25 +42,59 @@ UI::UI()
 	destroyButton.setPosition(12, 630);
 }
 
-void UI::Draw(sf::RenderWindow &window)
+void UI::Draw(sf::RenderWindow &window, InterFaces anInterface)
 {
-	window.draw(Information);
-	window.draw(switchModeButton);
-	window.draw(endTurnButton);
-	window.draw(UI1);
-	window.draw(Exit);
 
-	window.draw(weaponButton);
-	window.draw(consumerButton);
-	window.draw(houseButton);
-	window.draw(roadButton);
-	window.draw(entertainButton);
-	window.draw(destroyButton);
+
+	switch (anInterface)
+	{
+	case BuildingInterfaceUi:
+	{
+		window.draw(information);
+		window.draw(switchModeButton);
+		window.draw(endTurnButton);
+		window.draw(leftPanel);
+		window.draw(exit);
+
+		window.draw(weaponButton);
+		window.draw(consumerButton);
+		window.draw(houseButton);
+		window.draw(roadButton);
+		window.draw(entertainButton);
+		window.draw(destroyButton);
+
+		break;
+	}
+	case PoliticalInterfaceUi:
+	{
+		window.draw(information);
+		window.draw(switchModeButton);
+		window.draw(endTurnButton);
+		window.draw(leftPanel);
+		window.draw(exit);
+
+		
+		break;
+	}
+	case MenuInterfaceUi:
+	{
+		window.draw(menuBackground);
+		window.draw(menuStart);
+		window.draw(menuOption);
+		window.draw(menuExit);
+		break;
+	}
+	default:
+	{
+
+		break;
+	}
+	}
 }
-void UI::Update(sf::RenderWindow &window)
+void UI::Update(sf::RenderWindow &window, InterFaces anInterface)
 {
-	Draw(window);
-	if (InputManager::isSpriteClicked(Exit, sf::Mouse::Button::Left, window))
+	Draw(window, anInterface);
+	if (InputManager::isSpriteClicked(exit, sf::Mouse::Button::Left, window))
 	{
 		window.close();
 	}

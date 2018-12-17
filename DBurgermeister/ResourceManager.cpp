@@ -11,6 +11,10 @@ void ResourceManager::Init()
 {
 	LoadTexture("cursor", "Resources/kien.png");
 	LoadTexture("resourceSheet", "Resources/TileSheet.png");
+	LoadTexture("backgroundPicture", "Resources/BackgroundPic.png");
+	LoadTexture("menuStart", "Resources/menuStart.png");
+	LoadTexture("menuOption", "Resources/menuOption.png");
+	LoadTexture("menuExit", "Resources/menuExit.png");
 	LoadTexture("Exit", "Resources/Exit.png");
 	LoadTexture("Start", "Resources/Start.png");
 	LoadTexture("UI1", "Resources/BuildMenu.png");
@@ -25,6 +29,7 @@ void ResourceManager::Init()
 	LoadTexture("buildModeButton", "Resources/buildModeButton.png");
 	LoadTexture("eventCard", "Resources/EventPopUp.png");
 	LoadTexture("button", "Resources/CheckBox.png");
+
 
 	LoadFont("font", "Resources/testingFont.ttf");
 	LoadFont("titleFont", "Resources/Pride.otf");

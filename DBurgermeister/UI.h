@@ -12,23 +12,34 @@ enum Type
 	EntertainButton,
 	DestroyButton
 };
+enum InterFaces
+{
+	BuildingInterfaceUi,
+	PoliticalInterfaceUi,
+	MenuInterfaceUi
+};
 
 class UI
 {
 public:
 	UI();
 	~UI();
-	void Update(sf::RenderWindow &window);
-	void Draw(sf::RenderWindow &window);
+	void Update(sf::RenderWindow &window, InterFaces anInterface);
+	void Draw(sf::RenderWindow &window, InterFaces anInterface);
 
 	sf::Sprite GetSprite(Type spriteType);
 
 private:
-	sf::Sprite UI1;
-	sf::Sprite Information;
+	sf::Sprite leftPanel;
+	sf::Sprite information;
 	sf::Sprite switchModeButton;
 	sf::Sprite endTurnButton;
-	sf::Sprite Exit;
+	sf::Sprite exit;
+
+	sf::Sprite menuStart;
+	sf::Sprite menuOption;
+	sf::Sprite menuExit;
+	sf::Sprite menuBackground;
 
 	sf::Sprite weaponButton;
 	sf::Sprite consumerButton;
